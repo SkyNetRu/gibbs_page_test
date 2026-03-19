@@ -1,0 +1,16 @@
+{
+  "permissions": {
+    "allow": [
+      "mcp__plugin_figma_figma__get_design_context",
+      "mcp__plugin_figma_figma__get_screenshot",
+      "Bash(python:*)",
+      "Bash(cp \"D:/Projects/aeonik-font 2/aeonik-font/Aeonik-Regular.ttf\" \"D:/Projects/gibbs_page_test/app/assets/fonts/\")",
+      "Bash(cp \"D:/Projects/aeonik-font 2/aeonik-font/Aeonik-RegularItalic.ttf\" \"D:/Projects/gibbs_page_test/app/assets/fonts/\")",
+      "Bash(cp \"D:/Projects/aeonik-font 2/aeonik-font/Aeonik-Medium.ttf\" \"D:/Projects/gibbs_page_test/app/assets/fonts/\")",
+      "Bash(cp \"D:/Projects/aeonik-font 2/aeonik-font/Aeonik-MediumItalic.ttf\" \"D:/Projects/gibbs_page_test/app/assets/fonts/\")",
+      "Bash(cp \"D:/Projects/aeonik-font 2/aeonik-font/Aeonik-Bold.ttf\" \"D:/Projects/gibbs_page_test/app/assets/fonts/\")",
+      "Bash(curl:*)",
+      "Bash(grep:*)"
+    ]
+  }
+}
