@@ -11,8 +11,27 @@ export default defineNuxtConfig({
 
   css: ['~/assets/css/main.css'],
 
+  fonts: {
+    providers: {
+      google: false
+    },
+    defaults: {
+      weights: [400, 500, 600, 700],
+      styles: ['normal', 'italic']
+    }
+  },
+
   routeRules: {
     '/': { prerender: true }
+  },
+
+  vite: {
+    optimizeDeps: {
+      include: [
+        '@vue/devtools-core',
+        '@vue/devtools-kit'
+      ]
+    }
   },
 
   compatibilityDate: '2025-01-15',
