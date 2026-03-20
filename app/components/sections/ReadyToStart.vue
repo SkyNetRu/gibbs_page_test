@@ -4,7 +4,7 @@
     <!-- Driver image centered -->
     <div class="absolute bottom-0 left-1/2 -translate-x-1/2 w-[829px] pointer-events-none">
       <img
-        src="https://www.figma.com/api/mcp/asset/b03eb026-f94e-4acc-8bd4-d7db06dac395"
+        src="/images/ready-helmet.png"
         alt=""
         class="w-full object-cover"
       />

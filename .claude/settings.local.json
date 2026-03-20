@@ -10,7 +10,14 @@
       "Bash(cp \"D:/Projects/aeonik-font 2/aeonik-font/Aeonik-MediumItalic.ttf\" \"D:/Projects/gibbs_page_test/app/assets/fonts/\")",
       "Bash(cp \"D:/Projects/aeonik-font 2/aeonik-font/Aeonik-Bold.ttf\" \"D:/Projects/gibbs_page_test/app/assets/fonts/\")",
       "Bash(curl:*)",
-      "Bash(grep:*)"
+      "Bash(grep:*)",
+      "Bash(file D:/Projects/gibbs_page_test/public/images/*.png)",
+      "Bash(find D:/Projects/gibbs_page_test/public/images/ -size 0 -delete)",
+      "Bash(find D:/Projects/gibbs_page_test/public/images/ -size 0 -type f -delete)",
+      "Bash(npm install:*)",
+      "Bash(D:/Projects/gibbs_page_test/app/components/sections/Hero.vue:*)",
+      "Bash(npx playwright:*)",
+      "Bash(node -e \":*)"
     ]
   }
 }

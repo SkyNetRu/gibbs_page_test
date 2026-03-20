@@ -70,7 +70,7 @@
             <!-- CTA area -->
             <div class="bg-white/6 rounded-lg flex flex-col gap-3 pt-3 pb-1 px-2">
               <div class="flex items-center gap-2">
-                <img src="https://www.figma.com/api/mcp/asset/fa9f1a77-097b-4f1f-a719-1c61b11e1b8c" alt="check" class="w-[18px] h-[18px]" />
+                <img src="/images/icon-check.svg" alt="check" class="w-[18px] h-[18px]" />
                 <span class="text-[#cfcfcf] text-sm">No Activation Fee</span>
               </div>
               <!-- Get Started button -->

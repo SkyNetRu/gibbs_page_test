@@ -3,7 +3,7 @@
     style="background: linear-gradient(180deg, #040404 0%, #1a0c04 30%, #3d1a05 60%, #000504 100%)">
     <!-- Payout plaque image (phone mockup) -->
     <div class="absolute right-0 top-0 w-[779px] h-[717px] pointer-events-none">
-      <img src="https://www.figma.com/api/mcp/asset/d92f2df2-70b0-4623-bb1c-364c4b8c5ea8" alt="" class="w-full h-full object-cover" />
+      <img src="/images/simfi-payout-phone.png" alt="" class="w-full h-full object-cover" />
     </div>
 
     <div class="relative z-10 max-w-[1440px] mx-auto px-20 py-[122px] flex flex-col justify-between min-h-screen">

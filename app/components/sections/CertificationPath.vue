@@ -33,7 +33,7 @@ const cards = [
   {
     title: '01 — Enter the Challenge',
     bg: '#091211',
-    img: 'https://www.figma.com/api/mcp/asset/a8bccd7e-5951-445f-8289-3c5cf1d87f22',
+    img: '/images/cert-step-1.png',
     points: [
       'Trade within defined risk parameters.',
       'Follow structured rules built to mirror professional standards.',
@@ -43,7 +43,7 @@ const cards = [
   {
     title: '02 — Validate Performance',
     bg: '#000504',
-    img: 'https://www.figma.com/api/mcp/asset/a3e9192e-5acd-4a2d-9124-f9a4ee65fe8a',
+    img: '/images/cert-step-2.png',
     points: [
       'Meet the profit target.',
       'Respect the drawdown limits.',
@@ -53,7 +53,7 @@ const cards = [
   {
     title: '03 — Get SimFi™ Certified',
     bg: '#000504',
-    img: 'https://www.figma.com/api/mcp/asset/0f00b685-7624-41dd-a827-9fb5ef2f5b80',
+    img: '/images/cert-step-3.png',
     points: [
       'Once verified, enter the funded simulation stage.',
       'Maintain professional standards.',

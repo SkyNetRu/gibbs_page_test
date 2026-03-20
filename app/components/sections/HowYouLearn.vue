@@ -2,7 +2,7 @@
   <section class="relative min-h-[800px] overflow-hidden py-20">
     <!-- Background -->
     <img
-      src="https://www.figma.com/api/mcp/asset/b4983262-4447-4902-99c4-b5526f3e74f8"
+      src="/images/howyoulearn-mountain.png"
       alt=""
       class="absolute inset-0 w-full h-full object-cover"
     />

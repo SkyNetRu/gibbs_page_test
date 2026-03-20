@@ -26,19 +26,19 @@ const cards = [
   {
     title: 'How you trade',
     bg: '#091211',
-    img: 'https://www.figma.com/api/mcp/asset/8cdb4ecb-f44d-44d3-acb2-88812b45736e',
+    img: '/images/rules-car.png',
     description: 'Trading takes place in a simulated environment using real market data.\n\nTraders follow strict risk and drawdown rules to build discipline before capital access.'
   },
   {
     title: 'Performance targets',
     bg: '#000504',
-    img: 'https://www.figma.com/api/mcp/asset/dd7cc811-d678-4568-b2fe-2cccfb16af43',
+    img: '/images/rules-trophy.png',
     description: 'You must hit predefined profit targets relative to your capital tier.\n\nConsistency and risk respect are mandatory for certification.'
   },
   {
     title: 'Payouts',
     bg: '#000504',
-    img: 'https://www.figma.com/api/mcp/asset/523418d9-ec4c-428f-8f1b-8d55f67b1d7e',
+    img: '/images/rules-app.png',
     description: 'Earn performance-based payouts on a structured schedule. Payout amounts scale based on performance metrics. Payouts are discretionary and based on simulated trading performance under program rules.'
   }
 ]
