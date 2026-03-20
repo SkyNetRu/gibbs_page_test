@@ -4,15 +4,15 @@
     <!-- Driver image centered -->
     <div class="absolute bottom-0 left-1/2 -translate-x-1/2 w-[829px] pointer-events-none">
       <img
-        src="https://www.figma.com/api/mcp/asset/b03eb026-f94e-4acc-8bd4-d7db06dac395"
+        src="/images/ready-helmet.png"
         alt=""
         class="w-full object-cover"
       />
     </div>
 
     <div class="relative z-10 max-w-[1440px] mx-auto px-20 py-20 flex flex-col items-center gap-8">
-      <h2 class="text-[48px] text-[#000504] text-center leading-[1.6]">
-        Ready to <span class="lowercase font-normal">Get Started?</span>
+      <h2 class="text-[48px] text-[#000504] text-center leading-[1.6] font-normal">
+        Ready to get started?
       </h2>
       <div class="flex items-center gap-20 justify-center">
         <div v-for="point in points" :key="point" class="flex items-center gap-3">

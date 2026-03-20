@@ -10,7 +10,7 @@
       <!-- Left: brand -->
       <div class="w-[632px] flex flex-col gap-6">
         <div class="flex items-center gap-2">
-          <img src="https://www.figma.com/api/mcp/asset/18cceed4-1e48-4337-ad78-bcbe39d19a64" alt="E8Markets" class="h-8 w-auto" />
+          <img src="/images/logo-e8markets-footer.svg" alt="E8Markets" class="h-8 w-auto" />
         </div>
         <p class="text-white/80 text-sm max-w-[416px] leading-relaxed">
           Get in contact with us directly from this site with our live customer support or at our help center

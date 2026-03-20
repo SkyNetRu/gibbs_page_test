@@ -70,7 +70,7 @@
             <!-- CTA area -->
             <div class="bg-white/6 rounded-lg flex flex-col gap-3 pt-3 pb-1 px-2">
               <div class="flex items-center gap-2">
-                <img src="https://www.figma.com/api/mcp/asset/fa9f1a77-097b-4f1f-a719-1c61b11e1b8c" alt="check" class="w-[18px] h-[18px]" />
+                <img src="/images/icon-check.svg" alt="check" class="w-[18px] h-[18px]" />
                 <span class="text-[#cfcfcf] text-sm">No Activation Fee</span>
               </div>
               <!-- Get Started button -->
@@ -99,7 +99,7 @@
         <!-- Email promo -->
         <div class="flex flex-col items-center gap-6">
           <div class="border border-white/10 rounded-full px-6 py-3 flex items-center gap-8">
-            <p class="text-white/60 text-base">Save <span class="lowercase">up to 50% with our code</span></p>
+            <p class="text-white/60 text-base">Save up to 50% with our code</p>
             <div class="flex items-center bg-white/10 border border-white/10 rounded-full pl-4 pr-1 py-1">
               <input type="email" placeholder="YOUR EMAIL" class="bg-transparent text-[#6d6d6d] text-sm uppercase tracking-tight outline-none w-[100px]" />
               <button class="bg-[#19f3cb] text-[#03020e] text-sm font-bold uppercase rounded-full px-4 py-2">GET CODE</button>
