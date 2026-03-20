@@ -14,8 +14,8 @@
     <div class="relative z-10 max-w-[1440px] mx-auto px-20 min-h-[740px] flex items-center justify-end">
       <div class="w-[530px] flex flex-col gap-8">
         <h2 class="text-[48px] text-white leading-[1.2]">
-          Built for <span class="lowercase">Long-Term</span><br>
-          <span class="lowercase">Trading Performance</span>
+          Built for long-term<br>
+          trading performance
         </h2>
         <div class="flex flex-col gap-3">
           <p class="text-white/80 text-base">We do not fast-track hype. We develop professionals.</p>

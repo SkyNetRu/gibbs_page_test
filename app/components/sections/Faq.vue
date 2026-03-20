@@ -4,8 +4,8 @@
       <!-- Left side -->
       <div class="flex-1 flex flex-col justify-between min-h-[585px]">
         <h2 class="text-[56px] text-white leading-[1.2]">
-          Frequently <span class="lowercase">Asked</span><br>
-          <span class="lowercase">Questions</span>
+          Frequently asked<br>
+          questions
         </h2>
         <div class="flex flex-col gap-6">
           <p class="text-white text-sm italic leading-relaxed">

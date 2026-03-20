@@ -1,8 +1,8 @@
 <template>
   <section class="bg-white py-20">
     <div class="max-w-[1440px] mx-auto px-20 flex flex-col items-center gap-10">
-      <h2 class="text-[40px] text-[#000504] text-center">
-        Your <span class="lowercase font-normal">Path to</span> SimFi™ <span class="lowercase font-normal">Certification</span>
+      <h2 class="text-[40px] text-[#000504] text-center font-normal">
+        Your path to SimFi™ certification
       </h2>
       <div class="flex gap-7 items-center">
         <div v-for="card in cards" :key="card.title"

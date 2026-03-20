@@ -17,7 +17,11 @@
       "Bash(npm install:*)",
       "Bash(D:/Projects/gibbs_page_test/app/components/sections/Hero.vue:*)",
       "Bash(npx playwright:*)",
-      "Bash(node -e \":*)"
+      "Bash(node -e \":*)",
+      "Bash(node:*)",
+      "mcp__plugin_figma_figma__whoami",
+      "Bash(ls -la \"D:/Projects/gibbs_page_test/public/images/simfi-\"*)",
+      "Bash(find D:/Projects/gibbs_page_test/node_modules/@nuxt/ui -name carousel*)"
     ]
   }
 }
