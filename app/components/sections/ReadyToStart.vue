@@ -8,14 +8,7 @@
     >
 
     <!-- Smoke video -->
-    <video
-      src="/videos/smoke-2.mp4"
-      autoplay
-      loop
-      muted
-      playsinline
-      class="absolute inset-0 w-full h-full object-cover pointer-events-none mix-blend-screen"
-    />
+    <AtomicSmokeVideo />
 
     <!-- Driver image centered -->
     <div class="absolute top-[-5%] sm:top-[-15%] left-1/2 -translate-x-1/2 w-[829px] pointer-events-none">
