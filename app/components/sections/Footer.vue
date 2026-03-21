@@ -92,7 +92,7 @@
     <video
       src="/videos/e8-logotype-metalic-smoke.mp4"
       autoplay loop muted playsinline
-      class="inset-0 w-full h-full object-cover pointer-events-none mix-blend-screen -mt-[185px]"
+      class="inset-0 w-full h-full object-cover pointer-events-none mix-blend-screen -mt-[100px] lg:-mt-[155px] xl:-mt-[185px]"
     />
   </footer>
 </template>
