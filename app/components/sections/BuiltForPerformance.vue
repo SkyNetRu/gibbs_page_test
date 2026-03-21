@@ -26,7 +26,7 @@
       >
     </div>
 
-    <div class="relative z-10 max-w-[1440px] mx-auto pl-20 sm:px-20 min-h-[740px] flex items-center justify-end">
+    <div class="relative z-10 max-w-[1440px] mx-auto px-5 sm:px-20 min-h-[740px] flex items-center justify-end">
       <div class="w-[530px] flex flex-col gap-8">
         <h2 class="text-[48px] text-white leading-[1.2]">
           Built for long-term<br>

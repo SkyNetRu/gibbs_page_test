@@ -1,6 +1,6 @@
 <template>
   <section class="bg-white py-[124px]">
-    <div class="max-w-[1440px] mx-auto px-4 lg:px-20 flex flex-col items-center gap-16">
+    <div class="max-w-[1440px] mx-auto px-5 lg:px-20 flex flex-col items-center gap-16">
       <h2 class="text-[32px] text-[#000504] text-center max-w-[622px] leading-[1.2]">
         Over $60 million paid out to traders who chose the smarter way to trade
       </h2>

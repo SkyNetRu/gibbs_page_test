@@ -25,7 +25,7 @@
       </div>
 
       <!-- Container -->
-      <div class="border-t border-white/16 sm:px-20 pt-12 flex flex-col gap-14">
+      <div class="border-t border-white/16 px-5 sm:px-20 pt-12 flex flex-col gap-14">
         <!-- Account type selector -->
         <div class="flex flex-col items-center gap-3">
           <p class="text-white/80 text-sm font-medium">

@@ -15,12 +15,12 @@
     <div class="hero-overlay-2 absolute inset-0 pointer-events-none" />
 
     <!-- Main content: justify-end pushes promo+scroll to bottom -->
-    <div class="relative z-10 flex-1 flex flex-col items-center justify-end gap-[24px] pt-[199px] pb-[32px] px-4 lg:px-[80px]">
+    <div class="relative z-10 flex-1 flex flex-col items-center justify-end gap-[24px] pt-[199px] pb-[32px] px-5 sm:px-20">
       <!-- Heading + CTAs: absolute at top-[108px] -->
-      <div class="absolute left-1/2 -translate-x-1/2 top-[108px] flex flex-col gap-[32px] items-center justify-center">
+      <div class="absolute left-1/2 -translate-x-1/2 top-[108px] flex flex-col gap-[32px] items-center justify-center w-full px-5 sm:px-20">
         <!-- Headline group -->
         <div class="flex flex-col gap-[12px] items-center">
-          <h1 class="text-white text-center text-[64px]  font-normal leading-[1.6] [font-feature-settings:'liga'_off,'calt'_off]">
+          <h1 class="text-white text-center text-[40px] lg:text-[64px] font-normal leading-[1.6] [font-feature-settings:'liga'_off,'calt'_off]">
             Trade. Learn. Earn.
           </h1>
           <p class="text-white text-center text-[18px]  font-normal leading-[1.4] tracking-[-0.198px] w-full max-w-[835px] [font-family:'Inter',sans-serif] [font-feature-settings:'cv09'_1,'ss11'_1,'calt'_0,'liga'_0]">

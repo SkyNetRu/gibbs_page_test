@@ -1,10 +1,10 @@
 <template>
   <section class="bg-white py-20">
-    <div class="mx-auto px-20 flex flex-col items-center gap-10">
+    <div class="mx-auto px-5 sm:px-20 flex flex-col items-center gap-10">
       <h2 class="text-[40px] text-[#000504] text-center font-normal">
         Your path to SimFi™ certification
       </h2>
-      <div class="flex flex-wrap gap-7 items-center justify-center">
+      <div class="flex flex-wrap gap-7 items-center justify-center w-full">
         <CardsFeature
           v-for="card in cards"
           :key="card.title"
