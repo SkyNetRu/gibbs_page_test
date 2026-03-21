@@ -1,5 +1,8 @@
 <template>
-  <a href="#" class="button-metal">
+  <a
+    href="#"
+    class="button-metal"
+  >
     <div class="button-metal__outer_border">
       <div class="button-metal__outer_area">
         <div class="button-metal__inner_border">

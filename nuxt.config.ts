@@ -11,19 +11,11 @@ export default defineNuxtConfig({
 
   css: ['~/assets/css/main.css'],
 
-  fonts: {
-    providers: {
-      google: false
-    },
-    defaults: {
-      weights: [400, 500, 600, 700],
-      styles: ['normal', 'italic']
-    }
-  },
-
   routeRules: {
     '/': { prerender: true }
   },
+
+  compatibilityDate: '2025-01-15',
 
   vite: {
     optimizeDeps: {
@@ -35,14 +27,22 @@ export default defineNuxtConfig({
     }
   },
 
-  compatibilityDate: '2025-01-15',
-
   eslint: {
     config: {
       stylistic: {
         commaDangle: 'never',
         braceStyle: '1tbs'
       }
+    }
+  },
+
+  fonts: {
+    providers: {
+      google: false
+    },
+    defaults: {
+      weights: [400, 500, 600, 700],
+      styles: ['normal', 'italic']
     }
   }
 })

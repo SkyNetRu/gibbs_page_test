@@ -11,22 +11,38 @@
         <span class="text-white">→</span>
         <span class="text-white text-[32px] font-bold uppercase tracking-[-0.64px]">{{ salePrice }}</span>
       </div>
-      <p class="text-white text-xs text-center">Save <strong>{{ save }}</strong> with our code on first order</p>
+      <p class="text-white text-xs text-center">
+        Save <strong>{{ save }}</strong> with our code on first order
+      </p>
     </div>
 
     <!-- CTA area -->
     <div class="bg-white/6 rounded-lg flex flex-col gap-3 pt-3 pb-1 px-2">
       <div class="flex items-center gap-2 justify-center">
-        <img src="/images/icon-check.svg" alt="check" class="w-[18px] h-[18px]" />
+        <img
+          src="/images/icon-check.svg"
+          alt="check"
+          class="w-[18px] h-[18px]"
+        >
         <span class="text-[#cfcfcf] text-sm">No Activation Fee</span>
       </div>
       <!-- Get Started button -->
-      <AtomicButtonGlow variant="salmon" label="GET STARTED" :block="true" />
+      <AtomicButtonGlow
+        variant="salmon"
+        label="GET STARTED"
+        :block="true"
+      />
       <!-- Objectives -->
       <div class="flex flex-col gap-5 pb-1 px-2">
-        <p class="text-white text-sm font-medium text-center uppercase">Challenge objectives</p>
+        <p class="text-white text-sm font-medium text-center uppercase">
+          Challenge objectives
+        </p>
         <div class="flex flex-col gap-[18px] text-xs">
-          <div v-for="obj in objectives" :key="obj.label" class="flex items-center justify-between">
+          <div
+            v-for="obj in objectives"
+            :key="obj.label"
+            class="flex items-center justify-between"
+          >
             <span class="text-white/60">{{ obj.label }}</span>
             <span class="text-white font-bold">{{ obj.value }}</span>
           </div>
@@ -36,7 +52,10 @@
 
     <!-- Performance account link -->
     <div class="flex">
-      <AtomicButtonSecondary label="PERFORMANCE ACCOUNT" class="flex-1" />
+      <AtomicButtonSecondary
+        label="PERFORMANCE ACCOUNT"
+        class="flex-1"
+      />
     </div>
   </div>
 </template>
@@ -47,6 +66,6 @@ defineProps<{
   originalPrice: string
   salePrice: string
   save: string
-  objectives: { label: string; value: string }[]
+  objectives: { label: string, value: string }[]
 }>()
 </script>

@@ -9,29 +9,40 @@
       class="live-board backdrop-blur-[43px] border border-white/10 rounded-xl overflow-hidden h-[162px] flex flex-col gap-[12px] w-full pt-[12px] pb-[12px]"
     >
       <div class="flex items-center justify-between shrink-0 px-[12px]">
-        <p class="text-white/60 text-[14px] leading-[20px]">Updated every 60 seconds</p>
-        <a href="#" class="flex items-center gap-[10px] border-b border-white pb-px">
+        <p class="text-white/60 text-[14px] leading-[20px]">
+          Updated every 60 seconds
+        </p>
+        <a
+          href="#"
+          class="flex items-center gap-[10px] border-b border-white pb-px"
+        >
           <span class="text-white text-[14px] font-bold uppercase tracking-[-0.28px] leading-[20px]">View Full Payout Leaderboard</span>
           <span class="text-white text-[14px]">→</span>
         </a>
       </div>
       <UCarousel
         :items="payouts"
-        :dragFree="true"
+        :drag-free="true"
         :auto-scroll="{ speed: 2, stopOnInteraction: false, stopOnMouseEnter: true }"
         :ui="{
           viewport: 'overflow-hidden',
           container: 'flex gap-[12px] px-[12px]',
-          item: 'basis-[410px] shrink-0 grow-0',
+          item: 'basis-[410px] shrink-0 grow-0'
         }"
         loop
       >
         <template #default="{ item }">
           <div class="relative backdrop-blur-[27px] bg-[rgba(131,95,57,0.2)] border border-white/[0.08] rounded-xl px-[16px] flex items-center justify-between gap-[12px] h-[78px] [box-shadow:inset_0_-4px_48px_0_rgba(255,255,255,0.08)]">
-            <p class="text-white text-[14px] leading-[20px] shrink-0">{{ item.name }}</p>
+            <p class="text-white text-[14px] leading-[20px] shrink-0">
+              {{ item.name }}
+            </p>
             <span class="bg-white/[0.08] text-white text-[14px] leading-[20px] rounded-full px-[12px] py-[4px] text-center shrink-0">{{ item.market }}</span>
-            <p class="text-white/80 text-[14px] leading-[20px] text-center shrink-0">{{ item.time }}</p>
-            <p class="text-white font-bold text-[16px] leading-[24px] text-right shrink-0 ml-auto">{{ item.amount }}</p>
+            <p class="text-white/80 text-[14px] leading-[20px] text-center shrink-0">
+              {{ item.time }}
+            </p>
+            <p class="text-white font-bold text-[16px] leading-[24px] text-right shrink-0 ml-auto">
+              {{ item.amount }}
+            </p>
           </div>
         </template>
       </UCarousel>
@@ -57,11 +68,11 @@ interface Payout {
 }
 
 const payouts: Payout[] = [
-  { name: 'Gabriela B.', market: 'Forex',    time: '3 m ago',  amount: '$3,250' },
-  { name: 'Leo J.',      market: 'Futures',  time: '9 m ago',  amount: '$1,100' },
-  { name: 'Jonh S.',     market: 'Futures',  time: '12 m ago', amount: '$7,450' },
-  { name: 'Ryan K.',     market: 'Crypto',   time: '17 m ago', amount: '$112,900' },
-  { name: 'Mike S.',     market: 'Crypto',   time: '22 m ago', amount: '$62,900' },
+  { name: 'Gabriela B.', market: 'Forex', time: '3 m ago', amount: '$3,250' },
+  { name: 'Leo J.', market: 'Futures', time: '9 m ago', amount: '$1,100' },
+  { name: 'Jonh S.', market: 'Futures', time: '12 m ago', amount: '$7,450' },
+  { name: 'Ryan K.', market: 'Crypto', time: '17 m ago', amount: '$112,900' },
+  { name: 'Mike S.', market: 'Crypto', time: '22 m ago', amount: '$62,900' }
 ]
 </script>
 
