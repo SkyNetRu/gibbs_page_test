@@ -1,6 +1,6 @@
 <template>
   <section class="bg-white py-20">
-    <div class="mx-auto px-20 flex flex-col items-center gap-10">
+    <div class="mx-auto px-5 sm:px-20 flex flex-col items-center gap-10">
       <h2 class="text-[40px] text-[#000504] text-center">
         Rules & payouts
       </h2>

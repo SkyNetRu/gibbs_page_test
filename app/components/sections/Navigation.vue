@@ -1,6 +1,6 @@
 <template>
   <nav class="sticky top-0 z-50 backdrop-blur-[40px] bg-[#000504]/90 border-b border-white/16">
-    <div class="max-w-[1440px] mx-auto px-4 lg:px-20 py-5 flex items-center justify-between">
+    <div class="max-w-[1440px] mx-auto px-5 lg:px-20 py-5 flex items-center justify-between">
       <!-- Logo -->
       <div class="w-[250px]">
         <inline-svg

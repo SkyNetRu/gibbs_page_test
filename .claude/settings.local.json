@@ -31,7 +31,9 @@
       "Bash(cp \"C:/Users/Nick/AppData/Local/Temp/render-cert-bg.js\" \"D:/Projects/gibbs_page_test/render-cert-bg.js\")",
       "Bash(rm render-cert-bg.js)",
       "Read(//mnt/d/Projects/**)",
-      "Bash(npx eslint:*)"
+      "Bash(npx eslint:*)",
+      "Bash(mkdir -p tests/screenshots)",
+      "Bash(pnpm exec:*)"
     ]
   }
 }

@@ -1,5 +1,5 @@
 <template>
-  <div class="rounded-[20px] overflow-hidden w-[416px] h-[570px] relative flex-shrink-0">
+  <div class="rounded-[20px] overflow-hidden w-full max-w-[416px] h-[570px] relative flex flex-col">
     <img
       :src="bg"
       alt=""
@@ -7,7 +7,7 @@
     >
 
     <!-- ─── Content ─── -->
-    <div class="absolute flex flex-col gap-6 z-10 left-[35px] top-[34px] w-[341px]">
+    <div class="relative flex flex-col gap-6 z-10 px-[35px] pt-[34px]">
       <h3 class="text-white text-2xl font-medium whitespace-nowrap">
         {{ title }}
       </h3>
