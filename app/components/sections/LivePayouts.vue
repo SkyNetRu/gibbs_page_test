@@ -5,11 +5,22 @@
         Over $60 million paid out to traders who chose the smarter way to trade
       </h2>
       <div class="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-4 gap-8 w-full max-w-[1280px]">
-        <div v-for="badge in badges" :key="badge.caption" class="flex flex-col items-center gap-4">
+        <div
+          v-for="badge in badges"
+          :key="badge.caption"
+          class="flex flex-col items-center gap-4"
+        >
           <div class="h-20 flex items-center justify-center w-full">
-            <img :src="badge.img" :alt="badge.caption" class="max-h-full max-w-full object-contain"/>
+            <img
+              :src="badge.img"
+              :alt="badge.caption"
+              class="max-h-full max-w-full object-contain"
+            >
           </div>
-          <p class="text-[#717173] text-base font-medium text-center" v-html="badge.caption"></p>
+          <p
+            class="text-[#717173] text-base font-medium text-center"
+            v-html="badge.caption"
+          />
         </div>
       </div>
     </div>

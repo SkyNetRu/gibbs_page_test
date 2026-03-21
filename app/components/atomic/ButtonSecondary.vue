@@ -19,7 +19,7 @@ withDefaults(defineProps<{
   to?: string
   variant?: 'ghost' | 'filled'
 }>(), {
-  variant: 'ghost',
+  variant: 'ghost'
 })
 </script>
 

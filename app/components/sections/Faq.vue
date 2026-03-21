@@ -25,7 +25,9 @@
           class="backdrop-blur-[20px] bg-white/1 border border-white/8 rounded-xl p-6 flex items-center justify-between cursor-pointer hover:bg-white/5 transition-colors shadow-[inset_0_-4px_48px_rgba(255,255,255,0.08)]"
           @click="toggleFaq(i)"
         >
-          <p class="text-white text-lg flex-1 pr-6">{{ faq.question }}</p>
+          <p class="text-white text-lg flex-1 pr-6">
+            {{ faq.question }}
+          </p>
           <span class="text-white text-xl flex-shrink-0 w-6 text-center">{{ openFaq === i ? '×' : '+' }}</span>
         </div>
       </div>
@@ -45,7 +47,7 @@ const toggleFaq = (i: number) => {
 
 const faqs: Faq[] = [
   { question: 'What do I actually get when I sign up for the E8 Challenge?' },
-  { question: "How does the payout system work if I'm not trading real money?" },
+  { question: 'How does the payout system work if I\'m not trading real money?' },
   { question: 'How long does it take to get paid after passing the challenge?' },
   { question: 'What trading strategies are allowed in the evaluation phase?' },
   { question: 'What happens if I break a rule or stop trading?' },

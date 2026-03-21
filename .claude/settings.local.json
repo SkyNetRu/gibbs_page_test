@@ -29,7 +29,9 @@
       "Bash(mv cert-card2-gradient.tmp cert-card2-gradient.svg)",
       "Bash(mv cert-card2-bottle.tmp cert-card2-bottle.png)",
       "Bash(cp \"C:/Users/Nick/AppData/Local/Temp/render-cert-bg.js\" \"D:/Projects/gibbs_page_test/render-cert-bg.js\")",
-      "Bash(rm render-cert-bg.js)"
+      "Bash(rm render-cert-bg.js)",
+      "Read(//mnt/d/Projects/**)",
+      "Bash(npx eslint:*)"
     ]
   }
 }

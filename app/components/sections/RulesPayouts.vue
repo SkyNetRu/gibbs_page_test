@@ -1,7 +1,9 @@
 <template>
   <section class="bg-white py-20">
     <div class="mx-auto px-20 flex flex-col items-center gap-10">
-      <h2 class="text-[40px] text-[#000504] text-center">Rules & payouts</h2>
+      <h2 class="text-[40px] text-[#000504] text-center">
+        Rules & payouts
+      </h2>
       <div class="flex flex-wrap gap-7 items-center justify-center">
         <CardsFeature
           v-for="card in cards"
@@ -12,7 +14,7 @@
           :show-bullets="false"
         />
       </div>
-      <AtomicButtonMetal label="LEARN MORE"/>
+      <AtomicButtonMetal label="LEARN MORE" />
     </div>
   </section>
 </template>

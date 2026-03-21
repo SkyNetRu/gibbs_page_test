@@ -10,13 +10,12 @@
       playsinline
     />
     <!-- Overlay 1: mix-blend-overlay -->
-    <div class="hero-overlay-1 absolute inset-0 pointer-events-none mix-blend-overlay"></div>
+    <div class="hero-overlay-1 absolute inset-0 pointer-events-none mix-blend-overlay" />
     <!-- Overlay 2: dark gradient -->
-    <div class="hero-overlay-2 absolute inset-0 pointer-events-none"></div>
+    <div class="hero-overlay-2 absolute inset-0 pointer-events-none" />
 
     <!-- Main content: justify-end pushes promo+scroll to bottom -->
     <div class="relative z-10 flex-1 flex flex-col items-center justify-end gap-[24px] pt-[199px] pb-[32px] px-4 lg:px-[80px]">
-
       <!-- Heading + CTAs: absolute at top-[108px] -->
       <div class="absolute left-1/2 -translate-x-1/2 top-[108px] flex flex-col gap-[32px] items-center justify-center">
         <!-- Headline group -->
@@ -31,8 +30,14 @@
         </div>
         <!-- CTA buttons -->
         <div class="flex gap-[32px] items-center justify-center">
-          <AtomicButtonGlow label="START TRADING" href="#" />
-          <AtomicButtonSecondary label="HOW IT WORKS" href="#" />
+          <AtomicButtonGlow
+            label="START TRADING"
+            href="#"
+          />
+          <AtomicButtonSecondary
+            label="HOW IT WORKS"
+            href="#"
+          />
         </div>
       </div>
 
@@ -40,12 +45,18 @@
       <div class="w-full max-w-[1280px] backdrop-blur-[23px] bg-[rgba(3,2,14,0.56)] border-[1.171px] border-[rgba(255,255,255,0.16)] rounded-[14.05px] pb-[11px] pt-[20px] px-[1.171px]">
         <div class="flex items-center justify-between flex-wrap gap-y-3 px-[18px]">
           <div class="flex flex-col gap-2 font-schibsted">
-            <p class="text-white/60 text-sm">e8 one signature promotion until <span class="text-white ">8th march</span></p>
-            <p class="text-white/60 font-normal text-2xl ">Save up to <span class="font-bold text-white">50%</span> with our code</p>
+            <p class="text-white/60 text-sm">
+              e8 one signature promotion until <span class="text-white ">8th march</span>
+            </p>
+            <p class="text-white/60 font-normal text-2xl ">
+              Save up to <span class="font-bold text-white">50%</span> with our code
+            </p>
           </div>
           <AtomicEmailInput />
           <div class="flex items-center gap-3 lg:w-auto w-full justify-between">
-            <p class="text-sm text-white/60">Update <span class="text-white">1</span> of 4</p>
+            <p class="text-sm text-white/60">
+              Update <span class="text-white">1</span> of 4
+            </p>
             <div class="flex items-center gap-2">
               <button class="w-7 h-7 rounded-[14px] bg-white/10 flex items-center justify-center hover:bg-white/20 transition-colors">
                 <span class="text-white text-xs">‹</span>
@@ -62,7 +73,7 @@
             src="/images/promo-progress-line.svg"
             alt=""
             class="promo-progress"
-          />
+          >
         </div>
       </div>
 
@@ -73,7 +84,6 @@
           Performance-based payouts. Simulated trading environment. No shortcuts — just skill.
         </p>
       </div>
-
     </div>
   </section>
 </template>

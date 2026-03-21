@@ -8,19 +8,30 @@
           width="131"
           height="26"
           class="h-[26px] w-auto"
-          aria-label="E8Markets"/>
+          aria-label="E8Markets"
+        />
       </div>
       <!-- Nav links -->
       <div class="hidden lg:flex items-center gap-1">
-        <a v-for="link in navLinks" :key="link" href="#"
-           class="px-4 py-1.5 text-sm text-white font-medium hover:bg-white/10 rounded-full transition-colors">
+        <a
+          v-for="link in navLinks"
+          :key="link"
+          href="#"
+          class="px-4 py-1.5 text-sm text-white font-medium hover:bg-white/10 rounded-full transition-colors"
+        >
           {{ link }}
         </a>
       </div>
       <!-- Auth buttons -->
       <div class="flex items-center gap-2.5">
-        <AtomicButtonSecondary label="Log In" href="#"/>
-        <AtomicButtonGlow label="SIGN UP" href="#"/>
+        <AtomicButtonSecondary
+          label="Log In"
+          href="#"
+        />
+        <AtomicButtonGlow
+          label="SIGN UP"
+          href="#"
+        />
       </div>
     </div>
   </nav>
@@ -29,5 +40,5 @@
 <script setup lang="ts">
 import InlineSvg from 'vue-inline-svg'
 
-const navLinks = [ 'Forex', 'Futures', 'Crypto', 'Traders payout', 'FAQ' ]
+const navLinks = ['Forex', 'Futures', 'Crypto', 'Traders payout', 'FAQ']
 </script>

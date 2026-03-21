@@ -19,7 +19,7 @@
             list: 'market-tabs-list p-0 gap-0 border-b border-white/16',
             indicator: 'hidden',
             trigger: 'market-tab px-[40px] py-[14px] text-[16px] font-bold capitalize text-white rounded-none data-[state=inactive]:text-white data-[state=inactive]:opacity-100',
-            content: 'hidden',
+            content: 'hidden'
           }"
         />
       </div>
@@ -28,17 +28,21 @@
       <div class="border-t border-white/16 sm:px-20 pt-12 flex flex-col gap-14">
         <!-- Account type selector -->
         <div class="flex flex-col items-center gap-3">
-          <p class="text-white/80 text-sm font-medium">Accounts</p>
+          <p class="text-white/80 text-sm font-medium">
+            Accounts
+          </p>
           <div class="border border-white/10 rounded-full p-1 flex">
             <button
               v-for="account in accounts"
               :key="account"
-              @click="activeAccount = account"
               class="px-10 py-3 text-base font-bold capitalize rounded-full transition-all"
               :class="activeAccount === account
                 ? 'bg-white/8 border border-white/16 shadow-[inset_0_-4px_24px_rgba(255,255,255,0.16)] text-white'
                 : 'text-white'"
-            >{{ account }}</button>
+              @click="activeAccount = account"
+            >
+              {{ account }}
+            </button>
           </div>
         </div>
 
@@ -59,7 +63,9 @@
         <!-- Email promo -->
         <div class="flex flex-col items-center gap-6">
           <div class="md:border md:border-white/10 rounded-[123px] p-[13px] flex flex-col items-center gap-4 md:flex-row md:gap-[24px]">
-            <p class="border border-white/10 rounded-[123px] p-[16px] md:border-0 md:p-0 text-white/60 text-base pl-3">Save up to 50% with our code</p>
+            <p class="border border-white/10 rounded-[123px] p-[16px] md:border-0 md:p-0 text-white/60 text-base pl-3">
+              Save up to 50% with our code
+            </p>
             <AtomicEmailInput />
           </div>
           <div class="flex flex-col items-center gap-6">
@@ -97,8 +103,8 @@ interface PricingPlan {
 
 const marketTabs: MarketTab[] = [
   { label: 'Futures', value: 'Futures' },
-  { label: 'Forex',   value: 'Forex' },
-  { label: 'Crypto',  value: 'Crypto', disabled: true },
+  { label: 'Forex', value: 'Forex' },
+  { label: 'Crypto', value: 'Crypto', disabled: true }
 ]
 const accounts = ['E8 One', 'E8 Signature']
 const activeMarket = ref('Futures')

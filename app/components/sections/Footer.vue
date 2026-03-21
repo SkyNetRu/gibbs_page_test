@@ -13,24 +13,36 @@
             width="131"
             height="26"
             class="h-[26px] w-auto"
-            aria-label="E8Markets"/>
+            aria-label="E8Markets"
+          />
         </div>
         <p class="text-white/80 text-sm max-w-[416px] leading-5">
           Get in contact with us directly from this site with our live customer support or at our help center
         </p>
         <!-- Trustpilot -->
         <div class="flex flex-col gap-4  mt-15">
-          <img src="/images/trustpilot-logo.svg" alt="Trustpilot" class="h-5 w-[102.5px]" />
+          <img
+            src="/images/trustpilot-logo.svg"
+            alt="Trustpilot"
+            class="h-5 w-[102.5px]"
+          >
           <div class="flex items-center gap-[3.2px]">
             <div
-              v-for="i in 5" :key="i"
+              v-for="i in 5"
+              :key="i"
               class="w-8 h-8 flex items-center justify-center"
               :style="{ background: starBg(i) }"
             >
-              <img src="/images/icon-star.svg" alt="★" class="w-[22px] h-[22px]" />
+              <img
+                src="/images/icon-star.svg"
+                alt="★"
+                class="w-[22px] h-[22px]"
+              >
             </div>
           </div>
-          <p class="text-white/80 text-sm leading-5">Rated {{ rating }}/5.0</p>
+          <p class="text-white/80 text-sm leading-5">
+            Rated {{ rating }}/5.0
+          </p>
         </div>
       </div>
 
@@ -38,31 +50,64 @@
       <div class="flex gap-4 md:w-[50%] w-full flex-col sm:flex-row">
         <!-- Quick links -->
         <div class="w-[200px] flex flex-col gap-5">
-          <p class="text-white text-sm font-medium">Quick links</p>
+          <p class="text-white text-sm font-medium">
+            Quick links
+          </p>
           <div class="flex flex-col gap-3 text-sm text-white/60">
-            <a v-for="link in quickLinks" :key="link.label" href="#" class="hover:text-white transition-colors flex items-center gap-2">
+            <a
+              v-for="link in quickLinks"
+              :key="link.label"
+              href="#"
+              class="hover:text-white transition-colors flex items-center gap-2"
+            >
               {{ link.label }}
-              <span v-if="link.external" class="relative w-10 h-5 flex-shrink-0">
-                <img src="/images/icon-external.svg" alt="" class="absolute top-1/2 left-1/2 -translate-x-1/2 -translate-y-1/2 w-10 h-10" />
+              <span
+                v-if="link.external"
+                class="relative w-10 h-5 flex-shrink-0"
+              >
+                <img
+                  src="/images/icon-external.svg"
+                  alt=""
+                  class="absolute top-1/2 left-1/2 -translate-x-1/2 -translate-y-1/2 w-10 h-10"
+                >
               </span>
             </a>
           </div>
         </div>
         <!-- Legal -->
         <div class="w-[200px] flex flex-col gap-5">
-          <p class="text-white text-sm font-medium">Legal</p>
+          <p class="text-white text-sm font-medium">
+            Legal
+          </p>
           <div class="flex flex-col gap-3 text-sm text-white/60">
-            <a href="#" class="hover:text-white transition-colors">Privacy policy</a>
-            <a href="#" class="hover:text-white transition-colors">Terms & conditions</a>
+            <a
+              href="#"
+              class="hover:text-white transition-colors"
+            >Privacy policy</a>
+            <a
+              href="#"
+              class="hover:text-white transition-colors"
+            >Terms & conditions</a>
           </div>
         </div>
         <!-- Socials -->
         <div class="w-[200px] flex flex-col gap-5">
-          <p class="text-white text-sm font-medium">Socials</p>
+          <p class="text-white text-sm font-medium">
+            Socials
+          </p>
           <div class="flex flex-col gap-3 text-sm text-white/60">
-            <a v-for="social in socials" :key="social.label" href="#" class="hover:text-white transition-colors flex items-center gap-2">
-              <img :src="social.icon" :alt="social.label" class="w-10 h-10 flex-shrink-0" />
-              <span class="w-px h-3 bg-white/30"></span>
+            <a
+              v-for="social in socials"
+              :key="social.label"
+              href="#"
+              class="hover:text-white transition-colors flex items-center gap-2"
+            >
+              <img
+                :src="social.icon"
+                :alt="social.label"
+                class="w-10 h-10 flex-shrink-0"
+              >
+              <span class="w-px h-3 bg-white/30" />
               <div class="ml-2">{{ social.label }}</div>
             </a>
           </div>
@@ -74,9 +119,18 @@
     <div class="flex flex-col gap-6">
       <AtomicDivider />
       <div class="grid grid-cols-2 sm:grid-cols-4">
-        <a v-for="link in otherLinks" :key="link" href="#" class="flex items-center gap-3 text-white font-bold text-sm justify-center py-2 hover:opacity-70 transition-opacity">
+        <a
+          v-for="link in otherLinks"
+          :key="link"
+          href="#"
+          class="flex items-center gap-3 text-white font-bold text-sm justify-center py-2 hover:opacity-70 transition-opacity"
+        >
           {{ link }}
-          <img src="/images/icon-arrow-right.svg" alt="" class="w-4 h-4" />
+          <img
+            src="/images/icon-arrow-right.svg"
+            alt=""
+            class="w-4 h-4"
+          >
         </a>
       </div>
       <AtomicDivider />
@@ -91,7 +145,10 @@
     <!-- e8-logotype video -->
     <video
       src="/videos/e8-logotype-metalic-smoke.mp4"
-      autoplay loop muted playsinline
+      autoplay
+      loop
+      muted
+      playsinline
       class="inset-0 w-full h-full object-cover pointer-events-none mix-blend-screen -mt-[100px] lg:-mt-[155px] xl:-mt-[185px]"
     />
   </footer>
@@ -110,7 +167,7 @@ interface Social {
   icon: string
 }
 
-const rating = 4.5;
+const rating = 4.5
 
 function starBg(i: number): string {
   const full = Math.floor(rating)

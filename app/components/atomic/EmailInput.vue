@@ -4,8 +4,12 @@
       type="email"
       placeholder="YOUR EMAIL"
       class="bg-transparent text-[#6d6d6d] text-sm uppercase tracking-[-0.42px] outline-none [font-family:'Inter',sans-serif] [font-feature-settings:'cv09'_1,'ss11'_1,'calt'_0,'liga'_0]"
+    >
+    <AtomicButtonGlow
+      label="GET CODE"
+      variant="teal"
+      :pill-height="36"
     />
-    <AtomicButtonGlow label="GET CODE" variant="teal" :pill-height="36" />
   </div>
 </template>
 
