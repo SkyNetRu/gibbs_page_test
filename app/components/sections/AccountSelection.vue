@@ -18,7 +18,7 @@
           :ui="{
             list: 'market-tabs-list p-0 gap-0 border-b border-white/16',
             indicator: 'hidden',
-            trigger: 'market-tab px-[40px] py-[14px] text-[16px] font-bold capitalize text-white rounded-none data-[state=inactive]:text-white data-[state=inactive]:opacity-100',
+            trigger: 'market-tab px-[40px] py-[14px] text-[16px] font-bold capitalize text-white rounded-none data-[state=inactive]:text-white data-[state=inactive]:opacity-100 data-[state=active]:text-white',
             content: 'hidden'
           }"
         />
