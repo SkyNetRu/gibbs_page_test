@@ -15,13 +15,9 @@
 
     <!-- Content -->
     <div class="relative z-10 w-full px-4 max-w-[1440px] lg:px-[80px] py-[122px] flex flex-col justify-between min-h-screen mx-auto gap-[80px]">
-      <!-- Phone plaque layer 1 -->
+      <!-- Phone plaque -->
       <div class="absolute w-[779px] h-[717px] pointer-events-none hidden md:block right-[-60%] md:right-[-50%] xl:right-0 top-[-123px]">
-        <img src="/images/simfi-payout-plaque-1.png" alt="" class="absolute inset-0 w-full h-full object-cover" />
-      </div>
-      <!-- Phone plaque layer 2: color-dodge -->
-      <div class="absolute w-[779px] h-[717px] pointer-events-none mix-blend-color-dodge opacity-[0.56] hidden md:block right-[-60%] md:right-[-50%] xl:right-0 top-[-123px]">
-        <img src="/images/simfi-payout-plaque-2.png" alt="" class="absolute inset-0 w-full h-full object-cover" />
+        <img src="/images/simfi-payout-plaque.png" alt="" class="absolute inset-0 w-full h-full object-cover" />
       </div>
 
       <!-- Top: text block -->

@@ -11,12 +11,12 @@
     <img
       src="/images/howyoulearn-mountain.png"
       alt=""
-      class="absolute inset-0 w-full h-full object-cover object-[30%_center] max-h-full lg:w-auto lg:object-[left_center]"
+      class="absolute inset-0 w-full h-full object-cover sm:object-[30%_center] max-h-full lg:w-auto lg:object-[left_center]"
     />
 
     <!-- Content: right-aligned -->
     <div class="relative z-10 max-w-[1440px] mx-auto px-4 lg:px-[80px] py-[80px] flex justify-end">
-      <div class="w-full lg:w-[600px] flex flex-col gap-[126px]">
+      <div class="lg:w-[600px] flex flex-col gap-[126px]">
 
         <!-- Main block -->
         <div class="flex flex-col gap-[24px] max-w-[600px]">

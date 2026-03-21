@@ -1,43 +1,54 @@
 <template>
-  <footer class="bg-[#000504] px-20 py-20 flex flex-col gap-16">
+  <footer class="bg-[#000504] px-5 md:px-20 pt-20 flex flex-col gap-16 max-w-[1440px] mx-auto">
+    <!-- Top divider -->
     <div class="flex gap-4 items-center">
       <div class="flex-1 h-px bg-white/16"></div>
       <span class="text-white text-sm">+</span>
       <div class="flex-1 h-px bg-white/16"></div>
     </div>
 
-    <div class="flex gap-4 items-start">
+    <!-- Main columns -->
+    <div class="flex gap-4 items-start flex-col md:flex-row">
       <!-- Left: brand -->
-      <div class="w-[632px] flex flex-col gap-6">
-        <div class="flex items-center gap-2">
-          <img src="/images/logo-e8markets-footer.svg" alt="E8Markets" class="h-8 w-auto" />
+      <div class="md:w-[50%] flex flex-col gap-6 w-full">
+        <div class="w-[250px]">
+          <inline-svg
+            src="/images/logo-e8markets.svg"
+            width="131"
+            height="26"
+            class="h-[26px] w-auto"
+            aria-label="E8Markets"/>
         </div>
-        <p class="text-white/80 text-sm max-w-[416px] leading-relaxed">
+        <p class="text-white/80 text-sm max-w-[416px] leading-5">
           Get in contact with us directly from this site with our live customer support or at our help center
         </p>
         <!-- Trustpilot -->
-        <div class="flex flex-col gap-4 mt-auto">
-          <div class="flex items-center gap-1">
-            <div v-for="i in 4" :key="i" class="w-8 h-8 bg-[#219653] flex items-center justify-center">
-              <span class="text-white text-lg">★</span>
-            </div>
-            <div class="w-8 h-8 flex items-center justify-center" style="background: linear-gradient(90deg, #219653 50%, #d9d9d9 50%)">
-              <span class="text-white text-lg">★</span>
+        <div class="flex flex-col gap-4  mt-15">
+          <img src="/images/trustpilot-logo.svg" alt="Trustpilot" class="h-5 w-[102.5px]" />
+          <div class="flex items-center gap-[3.2px]">
+            <div
+              v-for="i in 5" :key="i"
+              class="w-8 h-8 flex items-center justify-center"
+              :style="{ background: starBg(i) }"
+            >
+              <img src="/images/icon-star.svg" alt="★" class="w-[22px] h-[22px]" />
             </div>
           </div>
-          <p class="text-white/80 text-sm">Rated 4.5/5.0</p>
+          <p class="text-white/80 text-sm leading-5">Rated {{ rating }}/5.0</p>
         </div>
       </div>
 
       <!-- Right: link columns -->
-      <div class="flex gap-4">
+      <div class="flex gap-4 md:w-[50%] w-full flex-col sm:flex-row">
         <!-- Quick links -->
         <div class="w-[200px] flex flex-col gap-5">
           <p class="text-white text-sm font-medium">Quick links</p>
           <div class="flex flex-col gap-3 text-sm text-white/60">
             <a v-for="link in quickLinks" :key="link.label" href="#" class="hover:text-white transition-colors flex items-center gap-2">
               {{ link.label }}
-              <span v-if="link.external" class="text-xs">↗</span>
+              <span v-if="link.external" class="relative w-10 h-5 flex-shrink-0">
+                <img src="/images/icon-external.svg" alt="" class="absolute top-1/2 left-1/2 -translate-x-1/2 -translate-y-1/2 w-10 h-10" />
+              </span>
             </a>
           </div>
         </div>
@@ -53,22 +64,27 @@
         <div class="w-[200px] flex flex-col gap-5">
           <p class="text-white text-sm font-medium">Socials</p>
           <div class="flex flex-col gap-3 text-sm text-white/60">
-            <a v-for="social in socials" :key="social" href="#" class="hover:text-white transition-colors">{{ social }}</a>
+            <a v-for="social in socials" :key="social.label" href="#" class="hover:text-white transition-colors flex items-center gap-2">
+              <img :src="social.icon" :alt="social.label" class="w-10 h-10 flex-shrink-0" />
+              <span class="w-px h-3 bg-white/30"></span>
+              <div class="ml-2">{{ social.label }}</div>
+            </a>
           </div>
         </div>
       </div>
     </div>
 
-    <!-- Divider + other links -->
+    <!-- Other links block -->
     <div class="flex flex-col gap-6">
       <div class="flex gap-4 items-center">
         <div class="flex-1 h-px bg-white/16"></div>
         <span class="text-white text-sm">+</span>
         <div class="flex-1 h-px bg-white/16"></div>
       </div>
-      <div class="flex items-center justify-between">
-        <a v-for="link in otherLinks" :key="link" href="#" class="flex items-center gap-2 text-white font-bold text-sm uppercase flex-1 justify-center hover:opacity-70 transition-opacity">
-          {{ link }} →
+      <div class="grid grid-cols-2 sm:grid-cols-4">
+        <a v-for="link in otherLinks" :key="link" href="#" class="flex items-center gap-3 text-white font-bold text-sm justify-center py-2 hover:opacity-70 transition-opacity">
+          {{ link }}
+          <img src="/images/icon-arrow-right.svg" alt="" class="w-4 h-4" />
         </a>
       </div>
       <div class="flex gap-4 items-center">
@@ -79,34 +95,38 @@
     </div>
 
     <!-- Legal text -->
-    <div class="flex flex-col gap-6 text-xs text-white/80">
-      <div>
-        <p class="text-white text-sm mb-1">Website Ownership</p>
-        <p class="italic leading-relaxed">This website is subject to the internal rules and policies of Digital Renaissance LLC, a company incorporated under the laws of Puerto Rico.</p>
-      </div>
-      <div>
-        <p class="text-white text-sm mb-1">E8 Funding LLC</p>
-        <p class="italic leading-relaxed">E8 Funding is a technology and education company located at: 4101 McEwen Rd #205, Dallas, TX 75244. E8 Funding provides access to trading accounts within a simulated environment for educational use only.</p>
-      </div>
-      <div>
-        <p class="text-white text-sm mb-1">Educational Use Only</p>
-        <p class="italic leading-relaxed">All content provided by E8 Funding LLC is intended strictly for informational and educational purposes. The content does not constitute investment advice or personal recommendations.</p>
-      </div>
-      <div>
-        <p class="text-white text-sm mb-1">Hypothetical Performance Disclosure – CFTC Rule 4.41</p>
-        <p class="italic leading-relaxed">Simulated or hypothetical trading results have inherent limitations. No representation is being made that any account will achieve profits or losses similar to those displayed.</p>
-      </div>
-    </div>
+    <SectionsFooterLegal />
 
+    <!-- Bottom divider -->
     <div class="flex gap-4 items-center">
       <div class="flex-1 h-px bg-white/16"></div>
       <span class="text-white text-sm">+</span>
       <div class="flex-1 h-px bg-white/16"></div>
     </div>
+
+    <!-- e8-logotype video -->
+    <video
+      src="/videos/e8-logotype-metalic-smoke.mp4"
+      autoplay loop muted playsinline
+      class="inset-0 w-full h-full object-cover pointer-events-none mix-blend-screen -mt-[185px]"
+    />
   </footer>
 </template>
 
 <script setup lang="ts">
+import InlineSvg from 'vue-inline-svg'
+
+const rating = 4.5;
+
+function starBg(i: number): string {
+  const full = Math.floor(rating)
+  const fraction = rating % 1
+  if (i <= full) return '#219653'
+  if (i === full + 1 && fraction > 0)
+    return `linear-gradient(90deg, #219653 ${fraction * 100}%, #d9d9d9 ${fraction * 100}%)`
+  return '#d9d9d9'
+}
+
 const quickLinks = [
   { label: 'Meet E8' },
   { label: 'Trading symbols' },
@@ -117,6 +137,13 @@ const quickLinks = [
   { label: 'E8X dashboard', external: true },
   { label: 'Careers' }
 ]
-const socials = ['Discord', 'Youtube', 'X', 'Instagram']
+
+const socials = [
+  { label: 'Discord', icon: '/images/icon-discord.svg' },
+  { label: 'Youtube', icon: '/images/icon-youtube.svg' },
+  { label: 'X', icon: '/images/icon-x.svg' },
+  { label: 'Instagram', icon: '/images/icon-instagram.svg' }
+]
+
 const otherLinks = ['Other links', 'Trial account', 'Discounts', 'Education']
 </script>

@@ -7,7 +7,7 @@
     <!-- Board -->
     <div
       class="backdrop-blur-[43px] border border-white/10 rounded-xl overflow-hidden h-[162px] flex flex-col gap-[12px] w-full pt-[12px] pb-[12px]"
-      style="background: linear-gradient(90deg, rgba(255,255,255,0.07) 0%, rgba(39,0,0,0.67) 79.3%); box-shadow: inset 0px 0px 48px 0px rgba(255,255,255,0.25);"
+      style="background: linear-gradient(90deg, rgba(255,255,255,0.07) 0%, rgba(39,0,0,0.67) 79.3%); box-shadow: inset 0 0 48px 0 rgba(255,255,255,0.25);"
     >
       <div class="flex items-center justify-between shrink-0 px-[12px]">
         <p class="text-white/60 text-[14px] leading-[20px]">Updated every 60 seconds</p>
@@ -28,7 +28,7 @@
         loop
       >
         <template #default="{ item }">
-          <div class="relative backdrop-blur-[27px] bg-[rgba(131,95,57,0.2)] border border-white/[0.08] rounded-xl px-[16px] flex items-center justify-between gap-[12px] h-[78px] [box-shadow:inset_0px_-4px_48px_0px_rgba(255,255,255,0.08)]">
+          <div class="relative backdrop-blur-[27px] bg-[rgba(131,95,57,0.2)] border border-white/[0.08] rounded-xl px-[16px] flex items-center justify-between gap-[12px] h-[78px] [box-shadow:inset_0_-4px_48px_0_rgba(255,255,255,0.08)]">
             <p class="text-white text-[14px] leading-[20px] shrink-0">{{ item.name }}</p>
             <span class="bg-white/[0.08] text-white text-[14px] leading-[20px] rounded-full px-[12px] py-[4px] text-center shrink-0">{{ item.market }}</span>
             <p class="text-white/80 text-[14px] leading-[20px] text-center shrink-0">{{ item.time }}</p>
