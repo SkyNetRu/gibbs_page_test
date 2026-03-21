@@ -27,8 +27,6 @@ withDefaults(defineProps<{
 .button-secondary {
   // ─── Ghost variant (dark with radial gradient) ───
   &--ghost {
-    //background: radial-gradient(ellipse at center, rgba(255,255,255,0.12) 0%, rgba(0,0,0,0.6) 75%);
-    //
     &:hover {
       background: radial-gradient(ellipse at center, rgba(255,255,255,0.18) 0%, rgba(0,0,0,0.5) 75%);
     }

@@ -1,22 +1,19 @@
 <template>
   <section class="relative min-h-[800px] overflow-hidden">
     <!-- Before Dawn: top-to-bottom dark atmosphere -->
-    <div
-      class="absolute inset-0"
-      style="background: linear-gradient(180deg, rgb(4,4,4) 5%, rgb(12,13,16) 17%, rgb(58,63,83) 42%, rgb(102,108,130) 73%); opacity: 0.75;"
-    ></div>
+    <div class="absolute inset-0 howyoulearn-bg"></div>
     <!-- Right-side darkening for text readability -->
     <div class="absolute inset-0 bg-gradient-to-r from-transparent via-[#000504]/40 to-[#000504]/90"></div>
     <!-- Background image: above gradients -->
     <img
       src="/images/howyoulearn-mountain.png"
       alt=""
-      class="absolute inset-0 w-full h-full object-cover object-[30%_center] max-h-full lg:w-auto lg:object-[left_center]"
+      class="absolute inset-0 w-full h-full object-cover sm:object-[30%_center] max-h-full lg:w-auto lg:object-[left_center]"
     />
 
     <!-- Content: right-aligned -->
     <div class="relative z-10 max-w-[1440px] mx-auto px-4 lg:px-[80px] py-[80px] flex justify-end">
-      <div class="w-full lg:w-[600px] flex flex-col gap-[126px]">
+      <div class="lg:w-[600px] flex flex-col gap-[126px]">
 
         <!-- Main block -->
         <div class="flex flex-col gap-[24px] max-w-[600px]">
@@ -42,9 +39,7 @@
 
         <!-- Disclaimer -->
         <div class="flex flex-col gap-[24px] max-w-[397px]">
-          <div class="flex items-center justify-center rotate-180">
-            <inline-svg src="/images/icon-scroll-down.svg" class="w-[10px] h-[13px]" />
-          </div>
+          <AtomicScrollIndicator />
           <p class="font-schibsted italic font-normal text-[14px] text-white/60 leading-[16px] [font-feature-settings:'cv09'_1,'ss11'_1,'calt'_0,'liga'_0]">
             E8 is a SaaS educational simulation built for skills training, data collection, and analytical modeling. There is no live-capital or margin risk. Enrollment fees purchase access to the simulation & assessment; payouts are discretionary, not guaranteed, and contingent on E8's acceptance & licensing of your performance data.
           </p>
@@ -56,11 +51,16 @@
 </template>
 
 <script setup lang="ts">
-import InlineSvg from 'vue-inline-svg'
-
 const steps = [
   'Trade on a proven framework.',
   'Qualify through performance.',
   'Get SimFi™ certified — and earn real payouts.',
 ]
 </script>
+
+<style lang="scss" scoped>
+.howyoulearn-bg {
+  background: linear-gradient(180deg, rgb(4,4,4) 5%, rgb(12,13,16) 17%, rgb(58,63,83) 42%, rgb(102,108,130) 73%);
+  opacity: 0.75;
+}
+</style>
