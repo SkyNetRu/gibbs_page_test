@@ -33,7 +33,8 @@
       "Read(//mnt/d/Projects/**)",
       "Bash(npx eslint:*)",
       "Bash(mkdir -p tests/screenshots)",
-      "Bash(pnpm exec:*)"
+      "Bash(pnpm exec:*)",
+      "Bash(python3 -c \":*)"
     ]
   }
 }

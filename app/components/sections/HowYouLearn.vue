@@ -6,14 +6,7 @@
     <div class="absolute inset-0 bg-gradient-to-r from-transparent via-[#000504]/40 to-[#000504]/90" />
 
     <!-- Smoke video -->
-    <video
-      src="/videos/smoke-2.mp4"
-      autoplay
-      loop
-      muted
-      playsinline
-      class="absolute inset-0 w-full h-full object-cover pointer-events-none mix-blend-screen"
-    />
+    <AtomicSmokeVideo />
 
     <!-- Background image: above gradients -->
     <img

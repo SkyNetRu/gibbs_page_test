@@ -8,14 +8,7 @@
     >
 
     <!-- Smoke video -->
-    <video
-      src="/videos/smoke-2.mp4"
-      autoplay
-      loop
-      muted
-      playsinline
-      class="absolute inset-0 w-full h-full object-cover pointer-events-none mix-blend-screen"
-    />
+    <AtomicSmokeVideo />
 
     <!-- Tire image -->
     <div class="hidden md:block absolute left-0 top-0 bottom-0 w-full pointer-events-none">
