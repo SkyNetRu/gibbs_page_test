@@ -60,15 +60,10 @@
         <div class="flex flex-col items-center gap-6">
           <div class="md:border md:border-white/10 rounded-[123px] p-[13px] flex flex-col items-center gap-4 md:flex-row md:gap-[24px]">
             <p class="border border-white/10 rounded-[123px] p-[16px] md:border-0 md:p-0 text-white/60 text-base pl-3">Save up to 50% with our code</p>
-            <div class="flex items-center bg-white/10 rounded-full border-[0.585px] border-white/10 pl-[18px] pr-[4px] py-[4px] justify-between overflow-hidden gap-4 w-full lg:w-auto">
-              <input type="email" placeholder="YOUR EMAIL" class="bg-transparent text-[#6d6d6d] text-sm uppercase tracking-[-0.42px] outline-none [font-family:'Inter',sans-serif] [font-feature-settings:'cv09'_1,'ss11'_1,'calt'_0,'liga'_0]" />
-              <AtomicButtonGlow label="GET CODE" variant="teal" :pill-height="36" />
-            </div>
+            <AtomicEmailInput />
           </div>
           <div class="flex flex-col items-center gap-6">
-            <div class="flex items-center justify-center rotate-180">
-              <inline-svg src="/images/icon-scroll-down.svg" class="w-[10px] h-[13px]" />
-            </div>
+            <AtomicScrollIndicator />
             <p class="text-white text-sm italic text-center">
               You're purchasing access to an educational simulation & assessment. Any payout is discretionary,<br>
               not guaranteed, and requires E8's acceptance & licensing of your performance data.
@@ -81,9 +76,26 @@
 </template>
 
 <script setup lang="ts">
-import InlineSvg from 'vue-inline-svg'
+interface MarketTab {
+  label: string
+  value: string
+  disabled?: boolean
+}
 
-const marketTabs = [
+interface Objective {
+  label: string
+  value: string
+}
+
+interface PricingPlan {
+  capital: string
+  originalPrice: string
+  salePrice: string
+  save: string
+  objectives: Objective[]
+}
+
+const marketTabs: MarketTab[] = [
   { label: 'Futures', value: 'Futures' },
   { label: 'Forex',   value: 'Forex' },
   { label: 'Crypto',  value: 'Crypto', disabled: true },
@@ -92,7 +104,7 @@ const accounts = ['E8 One', 'E8 Signature']
 const activeMarket = ref('Futures')
 const activeAccount = ref('E8 One')
 
-const plans = [
+const plans: PricingPlan[] = [
   {
     capital: '$25,000', originalPrice: '$119', salePrice: '$55', save: '$55',
     objectives: [

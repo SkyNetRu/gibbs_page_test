@@ -52,6 +52,4 @@ const simfiPoints = [
   'We license trader performance data, analyze behavioral patterns, and build risk models designed to develop disciplined, capital-ready professionals.',
   'You trade. We measure. Performance unlocks opportunity.',
 ]
-
-
 </script>

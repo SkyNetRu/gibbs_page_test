@@ -8,7 +8,7 @@
           questions
         </h2>
         <div class="flex flex-col gap-6">
-          <inline-svg src="/images/icon-scroll-down.svg" class="w-[10px] h-[13px] rotate-180" />
+          <AtomicScrollIndicator />
           <p class="text-white text-sm italic leading-relaxed">
             E8 Markets operates in a simulated trading environment.<br>
             Payouts are discretionary and based on simulated performance under defined program parameters.<br>
@@ -34,13 +34,16 @@
 </template>
 
 <script setup lang="ts">
-import InlineSvg from 'vue-inline-svg'
+interface Faq {
+  question: string
+}
+
 const openFaq = ref<number | null>(null)
 const toggleFaq = (i: number) => {
   openFaq.value = openFaq.value === i ? null : i
 }
 
-const faqs = [
+const faqs: Faq[] = [
   { question: 'What do I actually get when I sign up for the E8 Challenge?' },
   { question: "How does the payout system work if I'm not trading real money?" },
   { question: 'How long does it take to get paid after passing the challenge?' },

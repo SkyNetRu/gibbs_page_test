@@ -1,11 +1,7 @@
 <template>
   <footer class="bg-[#000504] px-5 md:px-20 pt-20 flex flex-col gap-16 max-w-[1440px] mx-auto">
     <!-- Top divider -->
-    <div class="flex gap-4 items-center">
-      <div class="flex-1 h-px bg-white/16"></div>
-      <span class="text-white text-sm">+</span>
-      <div class="flex-1 h-px bg-white/16"></div>
-    </div>
+    <AtomicDivider />
 
     <!-- Main columns -->
     <div class="flex gap-4 items-start flex-col md:flex-row">
@@ -76,33 +72,21 @@
 
     <!-- Other links block -->
     <div class="flex flex-col gap-6">
-      <div class="flex gap-4 items-center">
-        <div class="flex-1 h-px bg-white/16"></div>
-        <span class="text-white text-sm">+</span>
-        <div class="flex-1 h-px bg-white/16"></div>
-      </div>
+      <AtomicDivider />
       <div class="grid grid-cols-2 sm:grid-cols-4">
         <a v-for="link in otherLinks" :key="link" href="#" class="flex items-center gap-3 text-white font-bold text-sm justify-center py-2 hover:opacity-70 transition-opacity">
           {{ link }}
           <img src="/images/icon-arrow-right.svg" alt="" class="w-4 h-4" />
         </a>
       </div>
-      <div class="flex gap-4 items-center">
-        <div class="flex-1 h-px bg-white/16"></div>
-        <span class="text-white text-sm">+</span>
-        <div class="flex-1 h-px bg-white/16"></div>
-      </div>
+      <AtomicDivider />
     </div>
 
     <!-- Legal text -->
     <SectionsFooterLegal />
 
     <!-- Bottom divider -->
-    <div class="flex gap-4 items-center">
-      <div class="flex-1 h-px bg-white/16"></div>
-      <span class="text-white text-sm">+</span>
-      <div class="flex-1 h-px bg-white/16"></div>
-    </div>
+    <AtomicDivider />
 
     <!-- e8-logotype video -->
     <video
@@ -116,6 +100,16 @@
 <script setup lang="ts">
 import InlineSvg from 'vue-inline-svg'
 
+interface QuickLink {
+  label: string
+  external?: boolean
+}
+
+interface Social {
+  label: string
+  icon: string
+}
+
 const rating = 4.5;
 
 function starBg(i: number): string {
@@ -127,7 +121,7 @@ function starBg(i: number): string {
   return '#d9d9d9'
 }
 
-const quickLinks = [
+const quickLinks: QuickLink[] = [
   { label: 'Meet E8' },
   { label: 'Trading symbols' },
   { label: 'Affiliate program' },
@@ -138,7 +132,7 @@ const quickLinks = [
   { label: 'Careers' }
 ]
 
-const socials = [
+const socials: Social[] = [
   { label: 'Discord', icon: '/images/icon-discord.svg' },
   { label: 'Youtube', icon: '/images/icon-youtube.svg' },
   { label: 'X', icon: '/images/icon-x.svg' },

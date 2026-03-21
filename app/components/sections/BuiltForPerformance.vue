@@ -15,8 +15,7 @@
       <img
         src="/images/perf-tire.png"
         alt=""
-        class="absolute w-[1173px] h-[1292px] top-[-66%] right-[80%] lg:right-[45%] md:right-[75%] object-cover"
-        style=" transform: rotate(-6.73deg); aspect-ratio: 59/65;"
+        class="absolute w-[1173px] h-[1292px] top-[-66%] right-[80%] lg:right-[45%] md:right-[75%] object-cover rotate-[-6.73deg] aspect-[59/65]"
       />
     </div>
 

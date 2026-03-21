@@ -13,13 +13,13 @@
       <!-- Nav links -->
       <div class="hidden lg:flex items-center gap-1">
         <a v-for="link in navLinks" :key="link" href="#"
-           class="px-4 py-1.5 text-sm text-white font-medium hover:bg-white/10 rounded-full transition-colors">{{
-            link
-          }}</a>
+           class="px-4 py-1.5 text-sm text-white font-medium hover:bg-white/10 rounded-full transition-colors">
+          {{ link }}
+        </a>
       </div>
       <!-- Auth buttons -->
       <div class="flex items-center gap-2.5">
-        <AtomicButtonSecondary label="Log In" href="#" />
+        <AtomicButtonSecondary label="Log In" href="#"/>
         <AtomicButtonGlow label="SIGN UP" href="#"/>
       </div>
     </div>
