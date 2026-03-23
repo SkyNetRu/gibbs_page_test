@@ -1,9 +1,11 @@
 <template>
   <section class="relative min-h-[800px] overflow-hidden">
-    <!-- Before Dawn: top-to-bottom dark atmosphere -->
-    <div class="absolute inset-0 howyoulearn-bg" />
-    <!-- Right-side darkening for text readability -->
-    <div class="absolute inset-0 bg-gradient-to-r from-transparent via-[#000504]/40 to-[#000504]/90" />
+    <!-- Background -->
+    <img
+      src="/images/howyoulearn-bg.svg"
+      alt=""
+      class="absolute inset-0 w-full h-full object-cover pointer-events-none"
+    >
 
     <!-- Smoke video -->
     <AtomicSmokeVideo />
@@ -31,7 +33,9 @@
               :key="i"
               class="flex items-center gap-[12px]"
             >
-              <span class="font-schibsted font-bold text-white/80 w-[20px] h-[20px] flex items-center justify-center shrink-0 text-[16px] leading-none tracking-[-0.32px] [text-shadow:0_0_12px_rgba(255,255,255,0.33)]">
+              <span
+                class="font-schibsted font-bold text-white/80 w-[20px] h-[20px] flex items-center justify-center shrink-0 text-[16px] leading-none tracking-[-0.32px] [text-shadow:0_0_12px_rgba(255,255,255,0.33)]"
+              >
                 {{ i + 1 }}
               </span>
               <p class="font-schibsted font-medium text-white/80 leading-none">
@@ -53,8 +57,13 @@
         <!-- Disclaimer -->
         <div class="flex flex-col gap-[24px] max-w-[397px]">
           <AtomicScrollIndicator />
-          <p class="font-schibsted italic font-normal text-[14px] text-white/60 leading-[16px] [font-feature-settings:'cv09'_1,'ss11'_1,'calt'_0,'liga'_0]">
-            E8 is a SaaS educational simulation built for skills training, data collection, and analytical modeling. There is no live-capital or margin risk. Enrollment fees purchase access to the simulation & assessment; payouts are discretionary, not guaranteed, and contingent on E8's acceptance & licensing of your performance data.
+          <p
+            class="font-schibsted italic font-normal text-[14px] text-white/60 leading-[16px] [font-feature-settings:'cv09'_1,'ss11'_1,'calt'_0,'liga'_0]"
+          >
+            E8 is a SaaS educational simulation built for skills training, data collection, and analytical modeling.
+            There is no live-capital or margin risk. Enrollment fees purchase access to the simulation & assessment;
+            payouts are discretionary, not guaranteed, and contingent on E8's acceptance & licensing of your performance
+            data.
           </p>
         </div>
       </div>
@@ -72,7 +81,7 @@ const steps = [
 
 <style lang="scss" scoped>
 .howyoulearn-bg {
-  background: linear-gradient(180deg, rgb(4,4,4) 5%, rgb(12,13,16) 17%, rgb(58,63,83) 42%, rgb(102,108,130) 73%);
+  background: linear-gradient(180deg, rgb(4, 4, 4) 5%, rgb(12, 13, 16) 17%, rgb(58, 63, 83) 42%, rgb(102, 108, 130) 73%);
   opacity: 0.75;
 }
 </style>

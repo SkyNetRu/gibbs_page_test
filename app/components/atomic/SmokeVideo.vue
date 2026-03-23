@@ -22,12 +22,11 @@ onMounted(() => {
   if (!_state.primary) {
     _state.primary = el
     el.src = '/videos/smoke-2.mp4'
-  }
-  else {
+  } else {
     try {
-      el.srcObject = _state.primary.captureStream()
-    }
-    catch {
+      const primary = _state.primary as HTMLVideoElement & { captureStream(): MediaStream }
+      el.srcObject = primary.captureStream()
+    } catch {
       // Fallback if captureStream is not supported
       el.src = '/videos/smoke-2.mp4'
     }
