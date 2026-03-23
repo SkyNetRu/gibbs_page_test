@@ -24,7 +24,7 @@ onMounted(() => {
     el.src = '/videos/smoke-2.mp4'
   } else {
     try {
-      el.srcObject = _state.primary.captureStream()
+      el.srcObject = (_state.primary as any).captureStream()
     } catch {
       // Fallback if captureStream is not supported
       el.src = '/videos/smoke-2.mp4'
