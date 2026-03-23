@@ -8,7 +8,7 @@
     >
 
     <!-- Smoke video -->
-    <AtomicSmokeVideo/>
+    <AtomicSmokeVideo />
 
     <!-- Background image: above gradients -->
     <img
@@ -34,7 +34,8 @@
               class="flex items-center gap-[12px]"
             >
               <span
-                class="font-schibsted font-bold text-white/80 w-[20px] h-[20px] flex items-center justify-center shrink-0 text-[16px] leading-none tracking-[-0.32px] [text-shadow:0_0_12px_rgba(255,255,255,0.33)]">
+                class="font-schibsted font-bold text-white/80 w-[20px] h-[20px] flex items-center justify-center shrink-0 text-[16px] leading-none tracking-[-0.32px] [text-shadow:0_0_12px_rgba(255,255,255,0.33)]"
+              >
                 {{ i + 1 }}
               </span>
               <p class="font-schibsted font-medium text-white/80 leading-none">
@@ -55,9 +56,10 @@
 
         <!-- Disclaimer -->
         <div class="flex flex-col gap-[24px] max-w-[397px]">
-          <AtomicScrollIndicator/>
+          <AtomicScrollIndicator />
           <p
-            class="font-schibsted italic font-normal text-[14px] text-white/60 leading-[16px] [font-feature-settings:'cv09'_1,'ss11'_1,'calt'_0,'liga'_0]">
+            class="font-schibsted italic font-normal text-[14px] text-white/60 leading-[16px] [font-feature-settings:'cv09'_1,'ss11'_1,'calt'_0,'liga'_0]"
+          >
             E8 is a SaaS educational simulation built for skills training, data collection, and analytical modeling.
             There is no live-capital or margin risk. Enrollment fees purchase access to the simulation & assessment;
             payouts are discretionary, not guaranteed, and contingent on E8's acceptance & licensing of your performance
