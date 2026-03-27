@@ -6,7 +6,7 @@
     variant="link"
     :ui="{ base: `button-secondary button-secondary--${variant} relative inline-flex items-center justify-center rounded-full border border-white/50 px-[33px] h-[50px] cursor-pointer transition-colors` }"
   >
-    <span class="button-secondary__text text-[14px] not-italic font-bold leading-5 tracking-[-0.56px] uppercase whitespace-nowrap [font-feature-settings:'liga'_off,'calt'_off]">
+    <span class="button-secondary__text text-sm not-italic font-bold leading-5 tracking-[-0.56px] uppercase whitespace-nowrap [font-feature-settings:'liga'_off,'calt'_off]">
       <slot>{{ label }}</slot>
     </span>
   </UButton>

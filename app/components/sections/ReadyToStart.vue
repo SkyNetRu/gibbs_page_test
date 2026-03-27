@@ -27,7 +27,7 @@
 
     <div class="relative z-10 mx-auto flex flex-col flex-1 justify-between items-center gap-8">
       <div>
-        <h2 class="text-[48px] text-[#000504] text-center leading-[1.6] font-normal">
+        <h2 class="text-5xl text-[#000504] text-center leading-[1.6] font-normal">
           Ready to get started?
         </h2>
         <div class="flex flex-wrap items-center gap-x-20 gap-y-3 justify-center">
@@ -45,7 +45,7 @@
       </div>
       <AtomicButtonGlow
         label="START TRADING"
-        href="#"
+        href="https://e8markets.com/compare-account-challenges"
       />
     </div>
   </section>

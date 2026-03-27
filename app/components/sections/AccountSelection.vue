@@ -3,7 +3,7 @@
     <div class=" mx-auto flex flex-col">
       <!-- Headline -->
       <div class="flex flex-col items-center gap-8">
-        <h2 class="text-[48px] text-white text-center leading-[1.6]">
+        <h2 class="text-5xl text-white text-center leading-[1.6]">
           Choose your E8 Challenge
         </h2>
         <p class="text-white/80 text-base font-medium text-center ">
@@ -102,6 +102,7 @@ interface PricingPlan {
   salePrice: string
   save: string
   objectives: Objective[]
+  performanceObjectives: Objective[]
 }
 
 const marketTabs: MarketTab[] = [
@@ -122,6 +123,14 @@ const plans: PricingPlan[] = [
       { label: 'Drawdown type', value: 'EOD' },
       { label: 'Pass in as little as', value: '1 Day' },
       { label: 'Payout share', value: '80%' }
+    ],
+    performanceObjectives: [
+      { label: 'Max drawdown', value: '$1,000 (4%)' },
+      { label: 'Drawdown type', value: 'EOD' },
+      { label: 'Daily pause', value: '$500 (2%)' },
+      { label: 'Consistency rule', value: '35%' },
+      { label: 'First payout in as little as', value: '3 Days' },
+      { label: 'Payout share', value: '80%' }
     ]
   },
   {
@@ -131,6 +140,14 @@ const plans: PricingPlan[] = [
       { label: 'Max drawdown', value: '$2,000 (4%)' },
       { label: 'Drawdown type', value: 'EOD' },
       { label: 'Pass in as little as', value: '1 Day' },
+      { label: 'Payout share', value: '80%' }
+    ],
+    performanceObjectives: [
+      { label: 'Max drawdown', value: '$2,000 (4%)' },
+      { label: 'Drawdown type', value: 'EOD' },
+      { label: 'Daily pause', value: '$1,000 (2%)' },
+      { label: 'Consistency rule', value: '35%' },
+      { label: 'First payout in as little as', value: '3 Days' },
       { label: 'Payout share', value: '80%' }
     ]
   },
@@ -142,6 +159,14 @@ const plans: PricingPlan[] = [
       { label: 'Drawdown type', value: 'EOD' },
       { label: 'Pass in as little as', value: '1 Day' },
       { label: 'Payout share', value: '80%' }
+    ],
+    performanceObjectives: [
+      { label: 'Max drawdown', value: '$3,000 (3%)' },
+      { label: 'Drawdown type', value: 'EOD' },
+      { label: 'Daily pause', value: '$2,000 (2%)' },
+      { label: 'Consistency rule', value: '35%' },
+      { label: 'First payout in as little as', value: '3 Days' },
+      { label: 'Payout share', value: '80%' }
     ]
   },
   {
@@ -151,6 +176,14 @@ const plans: PricingPlan[] = [
       { label: 'Max drawdown', value: '$4,500 (3%)' },
       { label: 'Drawdown type', value: 'EOD' },
       { label: 'Pass in as little as', value: '1 Day' },
+      { label: 'Payout share', value: '80%' }
+    ],
+    performanceObjectives: [
+      { label: 'Max drawdown', value: '$4,500 (3%)' },
+      { label: 'Drawdown type', value: 'EOD' },
+      { label: 'Daily pause', value: '$3,000 (2%)' },
+      { label: 'Consistency rule', value: '35%' },
+      { label: 'First payout in as little as', value: '3 Days' },
       { label: 'Payout share', value: '80%' }
     ]
   }

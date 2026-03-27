@@ -76,7 +76,7 @@
           :ui="{ base: 'button-glow__pill relative inline-flex items-center justify-center rounded-full cursor-pointer transition-colors' }"
         >
           <span
-            class="button-glow__text relative text-[14px] not-italic font-bold leading-5 uppercase whitespace-nowrap [font-feature-settings:'liga'_off,'calt'_off]"
+            class="button-glow__text relative text-sm not-italic font-bold leading-5 uppercase whitespace-nowrap [font-feature-settings:'liga'_off,'calt'_off]"
           >
             <slot>{{ label }}</slot>
           </span>

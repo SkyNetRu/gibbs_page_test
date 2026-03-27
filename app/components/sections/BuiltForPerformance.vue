@@ -27,7 +27,7 @@
 
     <div class="relative z-10 max-w-[1440px] mx-auto px-5 lg:px-20 min-h-[740px] flex items-center justify-end">
       <div class="w-[530px] flex flex-col gap-8">
-        <h2 class="text-[48px] text-white leading-[1.2]">
+        <h2 class="text-5xl text-white leading-[1.2]">
           Built for long-term<br>
           trading performance
         </h2>
@@ -59,7 +59,7 @@
           </p>
         </div>
         <a
-          href="#"
+          href="https://e8markets.com/compare-account-challenges"
           class="self-start bg-white text-black text-sm font-bold uppercase tracking-[-0.56px] rounded-full px-8 py-3 hover:opacity-90 transition-opacity"
         >
           START TRADING

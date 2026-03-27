@@ -1,6 +1,6 @@
 <template>
   <a
-    href="#"
+    :href="href"
     class="button-metal"
   >
     <div class="button-metal__outer_border">
@@ -16,7 +16,10 @@
 </template>
 
 <script setup lang="ts">
-defineProps<{ label: string }>()
+withDefaults(defineProps<{ label?: string, href?: string }>(), {
+  label: '',
+  href: '#'
+})
 </script>
 
 <style lang="scss" scoped>

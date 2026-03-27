@@ -9,15 +9,15 @@
       class="live-board backdrop-blur-[43px] border border-white/10 rounded-xl overflow-hidden h-[162px] flex flex-col gap-3 w-full pt-3 pb-3"
     >
       <div class="flex items-center justify-between shrink-0 px-3">
-        <p class="text-white/60 text-[14px] leading-[20px]">
+        <p class="text-white/60 text-sm leading-[20px]">
           Updated every 60 seconds
         </p>
         <a
-          href="#"
+          href="https://e8markets.com/e8-traders-stories"
           class="flex items-center gap-[10px] border-b border-white pb-3x"
         >
-          <span class="text-white text-[14px] font-bold uppercase tracking-[-0.28px] leading-[20px]">View Full Payout Leaderboard</span>
-          <span class="text-white text-[14px]">→</span>
+          <span class="text-white text-sm font-bold uppercase tracking-[-0.28px] leading-[20px]">View Full Payout Leaderboard</span>
+          <span class="text-white text-sm">→</span>
         </a>
       </div>
       <UCarousel
@@ -33,11 +33,11 @@
       >
         <template #default="{ item }">
           <div class="relative backdrop-blur-[27px] bg-[rgba(131,95,57,0.2)] border border-white/[0.08] rounded-xl px-4 flex items-center justify-between gap-3 h-[78px] [box-shadow:inset_0_-4px_48px_0_rgba(255,255,255,0.08)]">
-            <p class="text-white text-[14px] leading-[20px] shrink-0">
+            <p class="text-white text-sm leading-[20px] shrink-0">
               {{ item.name }}
             </p>
-            <span class="bg-white/[0.08] text-white text-[14px] leading-[20px] rounded-full px-3 py-1 text-center shrink-0">{{ item.market }}</span>
-            <p class="text-white/80 text-[14px] leading-[20px] text-center shrink-0">
+            <span class="bg-white/[0.08] text-white text-sm leading-[20px] rounded-full px-3 py-1 text-center shrink-0">{{ item.market }}</span>
+            <p class="text-white/80 text-sm leading-[20px] text-center shrink-0">
               {{ item.time }}
             </p>
             <p class="text-white font-bold text-base leading-[24px] text-right shrink-0 ml-auto">
@@ -51,7 +51,7 @@
     <!-- Disclaimer -->
     <div class="flex flex-col gap-3 items-center w-full  mx-auto">
       <AtomicScrollIndicator />
-      <p class="text-white text-[14px] italic text-center leading-[16px]">
+      <p class="text-white text-sm italic text-center leading-[16px]">
         Hypothetical/simulated performance has inherent limitations and does not represent actual trading;<br>
         Results may differ materially in live market conditions.
       </p>
