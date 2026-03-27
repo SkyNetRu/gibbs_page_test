@@ -44,7 +44,7 @@
       <!-- Top: text block -->
       <div class="flex flex-col gap-8 w-full md:max-w-[50%] lg:w-[600px]">
         <h2
-          class="font-schibsted text-[48px] font-normal text-[#441306] leading-[1.4] [font-feature-settings:'calt'_0,'liga'_0]"
+          class="font-schibsted text-5xl font-normal text-[#441306] leading-[1.4] [font-feature-settings:'calt'_0,'liga'_0]"
         >
           The SimFi™ experience
         </h2>
@@ -72,7 +72,7 @@
         <div class="flex">
           <AtomicButtonSecondary
             label="START TRADING"
-            href="#"
+            href="https://e8markets.com/compare-account-challenges"
             variant="filled"
           />
         </div>

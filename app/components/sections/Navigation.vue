@@ -36,11 +36,11 @@
       <div class="hidden lg:flex items-center gap-1">
         <a
           v-for="link in navLinks"
-          :key="link"
-          href="#"
+          :key="link.label"
+          :href="link.href"
           class="px-4 py-1.5 text-sm text-white font-medium hover:bg-white/10 rounded-full transition-colors"
         >
-          {{ link }}
+          {{ link.label }}
         </a>
       </div>
 
@@ -48,11 +48,11 @@
       <div class="flex items-center gap-2.5 ml-auto lg:ml-0">
         <AtomicButtonSecondary
           label="Log In"
-          href="#"
+          href="https://e8x.e8markets.com"
         />
         <AtomicButtonGlow
           label="SIGN UP"
-          href="#"
+          href="https://e8x.e8markets.com"
         />
       </div>
     </div>
@@ -61,11 +61,15 @@
 
 <script setup lang="ts">
 import InlineSvg from 'vue-inline-svg'
+import type { ILink } from '~/types/links'
 
-const navLinks = ['Forex', 'Futures', 'Crypto', 'Traders payout', 'FAQ']
+const navLinks: ILink[] = [
+  { label: 'Forex', href: '/forex' },
+  { label: 'Futures', href: '/futures' },
+  { label: 'Crypto', href: '/crypto' },
+  { label: 'Traders payout', href: '/traders-payout' },
+  { label: 'FAQ', href: '/faq' }
+]
 
-const mobileMenuItems = navLinks.map(link => ({
-  label: link,
-  href: '#'
-}))
+const mobileMenuItems = navLinks.map(({ label, href }) => ({ label, href }))
 </script>

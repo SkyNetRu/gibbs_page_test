@@ -91,10 +91,14 @@
             Legal
           </p>
           <div class="flex flex-col gap-3 text-sm text-white/60">
-            <a :href="`${DOMAIN}/e8-markets-privacy-policy`" class="hover:text-white transition-colors">Privacy policy</a>
-            <a :href="`${DOMAIN}/e8-markets-terms-and-conditions`" class="hover:text-white transition-colors">Terms & conditions</a>
-            <a :href="`${DOMAIN}/e8-markets-cookies-policy`" class="hover:text-white transition-colors">Cookies policy</a>
-            <a :href="`${DOMAIN}/legal/affiliate`" class="hover:text-white transition-colors">Affiliate terms</a>
+            <a
+              v-for="link in legalLinks"
+              :key="link.label"
+              :href="link.href"
+              class="hover:text-white transition-colors"
+            >
+              {{ link.label }}
+            </a>
           </div>
         </div>
         <!-- Socials -->
@@ -133,11 +137,11 @@
       <div class="grid grid-cols-2 sm:grid-cols-4">
         <a
           v-for="link in otherLinks"
-          :key="link"
-          href="#"
+          :key="link.label"
+          :href="link.href"
           class="flex items-center gap-3 text-white font-bold text-sm justify-center py-2 hover:opacity-70 transition-opacity"
         >
-          {{ link }}
+          {{ link.label }}
           <img
             src="/images/icon-arrow-right.svg"
             alt=""
@@ -171,18 +175,7 @@
 
 <script setup lang="ts">
 import InlineSvg from 'vue-inline-svg'
-
-interface QuickLink {
-  label: string
-  href: string
-  external?: boolean
-}
-
-interface Social {
-  label: string
-  icon: string
-  href: string
-}
+import type { ILink, ISocial } from '~/types/links'
 
 const rating = 4.5
 
@@ -195,24 +188,33 @@ function starBg(i: number): string {
   return '#d9d9d9'
 }
 
-const DOMAIN = 'https://e8markets.com'
-
-const quickLinks: QuickLink[] = [
-  { label: 'Qualification', href: `${DOMAIN}/e8-markets-evaluation` },
-  { label: 'Affiliate program', href: `${DOMAIN}/affiliate` },
-  { label: 'Trading symbols', href: 'https://e8x.e8markets.com/trading-symbols', external: true },
-  { label: 'Help center', href: 'https://help.e8markets.com/en', external: true },
-  { label: 'E8X dashboard', href: 'https://e8x.e8markets.com/', external: true },
-  { label: 'E8 Blog', href: 'https://blog.e8markets.com', external: true },
-  { label: 'Discounts', href: `${DOMAIN}/e8-markets-discount-code` }
+const legalLinks: ILink[] = [
+  { label: 'Privacy policy', href: '/e8-markets-privacy-policy' },
+  { label: 'Terms & conditions', href: '/e8-markets-terms-and-conditions' }
 ]
 
-const socials: Social[] = [
+const quickLinks: ILink[] = [
+  { label: 'Meet E8', href: '/meet-e8' },
+  { label: 'Trading symbols', href: 'https://e8x.e8markets.com/trading-symbols', external: true },
+  { label: 'Affiliate program', href: '/affiliate' },
+  { label: 'Contact', href: '/contact' },
+  { label: 'About us', href: '/about' },
+  { label: 'Help center', href: 'https://help.e8markets.com/en', external: true },
+  { label: 'E8X dashboard', href: 'https://e8x.e8markets.com/', external: true },
+  { label: 'Careers', href: '/careers' }
+]
+
+const socials: ISocial[] = [
   { label: 'Discord', icon: '/images/icon-discord.svg', href: 'https://discord.com/invite/e8markets' },
   { label: 'Youtube', icon: '/images/icon-youtube.svg', href: 'https://www.youtube.com/channel/UCHGznmL3rdnsDKDgrRyK_VQ' },
   { label: 'X', icon: '/images/icon-x.svg', href: 'https://twitter.com/e8markets' },
   { label: 'Instagram', icon: '/images/icon-instagram.svg', href: 'https://www.instagram.com/E8Marketscom' }
 ]
 
-const otherLinks = ['Other links', 'Trial account', 'Discounts', 'Education']
+const otherLinks: ILink[] = [
+  { label: 'Other links', href: '/other-links' },
+  { label: 'Trial account', href: '/trial-account' },
+  { label: 'Discounts', href: '/e8-markets-discount-code' },
+  { label: 'Education', href: '/education' }
+]
 </script>

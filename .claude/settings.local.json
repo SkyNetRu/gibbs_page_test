@@ -34,7 +34,8 @@
       "Bash(npx eslint:*)",
       "Bash(mkdir -p tests/screenshots)",
       "Bash(pnpm exec:*)",
-      "Bash(python3 -c \":*)"
+      "Bash(python3 -c \":*)",
+      "Bash(find /mnt/d/Projects/gibbs_page_test/node_modules -path *@nuxt/ui* -name *.vue)"
     ]
   }
 }

@@ -28,7 +28,7 @@
       <div class="lg:w-[600px] flex flex-col gap-[126px]">
         <!-- Main block -->
         <div class="flex flex-col gap-6 max-w-[600px] sm:bg-transparent sm:shadow-none sm:backdrop-blur-none rounded-2xl sm:rounded-none bg-black/30 backdrop-blur-sm shadow-[0_0_60px_40px_rgba(0,0,0,0.35)] p-4 md:p-0">
-          <h2 class="max-w-[337px] text-[48px] text-white leading-[1.2] [font-feature-settings:'calt'_0,'liga'_0]">
+          <h2 class="max-w-[337px] text-5xl text-white leading-[1.2] [font-feature-settings:'calt'_0,'liga'_0]">
             How You Learn While You Earn
           </h2>
 
@@ -54,7 +54,7 @@
           <div class="flex">
             <AtomicButtonSecondary
               label="START TRADING"
-              href="#"
+              href="https://e8markets.com/compare-account-challenges"
               variant="filled"
             />
           </div>
@@ -64,7 +64,7 @@
         <div class="flex flex-col gap-6 max-w-[397px]">
           <AtomicScrollIndicator />
           <p
-            class="font-schibsted italic font-normal text-[14px] text-white/60 leading-[16px] [font-feature-settings:'cv09'_1,'ss11'_1,'calt'_0,'liga'_0] sm:bg-transparent sm:shadow-none sm:backdrop-blur-none rounded-2xl sm:rounded-none bg-black/30 backdrop-blur-sm shadow-[0_0_60px_40px_rgba(0,0,0,0.35)]"
+            class="font-schibsted italic font-normal text-sm text-white/60 leading-[16px] [font-feature-settings:'cv09'_1,'ss11'_1,'calt'_0,'liga'_0] sm:bg-transparent sm:shadow-none sm:backdrop-blur-none rounded-2xl sm:rounded-none bg-black/30 backdrop-blur-sm shadow-[0_0_60px_40px_rgba(0,0,0,0.35)]"
           >
             E8 is a SaaS educational simulation built for skills training, data collection, and analytical modeling.
             There is no live-capital or margin risk. Enrollment fees purchase access to the simulation & assessment;

@@ -23,7 +23,7 @@
           <h1 class="text-white text-center text-[40px] lg:text-[64px] font-normal leading-[1.6] [font-feature-settings:'liga'_off,'calt'_off]">
             Trade. Learn. Earn.
           </h1>
-          <p class="text-white text-center text-[18px]  font-normal leading-[1.4] tracking-[-0.198px] w-full max-w-[835px] [font-family:'Inter',sans-serif] [font-feature-settings:'cv09'_1,'ss11'_1,'calt'_0,'liga'_0]">
+          <p class="text-white text-center text-lg font-normal leading-[1.4] tracking-[-0.198px] w-full max-w-[835px] [font-family:'Inter',sans-serif] [font-feature-settings:'cv09'_1,'ss11'_1,'calt'_0,'liga'_0]">
             Follow a structured path built around discipline and risk management.<br>
             Trade in a live simulated environment. Perform like a professional (funded) trader. Get paid like one.
           </p>
@@ -36,7 +36,7 @@
           />
           <AtomicButtonSecondary
             label="HOW IT WORKS"
-            href="#"
+            href="/how-it-works"
           />
         </div>
       </div>
@@ -81,7 +81,7 @@
         <!-- Scroll indicator + disclaimer: in flow, at bottom -->
         <div class="flex flex-col gap-6 items-center justify-center">
           <AtomicScrollIndicator />
-          <p class="[font-family:'Schibsted_Grotesk',sans-serif] italic font-normal leading-4 text-[14px] text-center text-white px-4">
+          <p class="[font-family:'Schibsted_Grotesk',sans-serif] italic font-normal leading-4 text-sm text-center text-white px-4">
             Performance-based payouts. Simulated trading environment. No shortcuts — just skill.
           </p>
         </div>

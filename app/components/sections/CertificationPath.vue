@@ -14,7 +14,7 @@
           :show-bullets="true"
         />
       </div>
-      <AtomicButtonMetal label="LEARN MORE" />
+      <AtomicButtonMetal label="LEARN MORE" href="https://help.e8markets.com/en/" />
     </div>
   </section>
 </template>
