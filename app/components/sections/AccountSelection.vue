@@ -109,7 +109,7 @@ const marketTabs: MarketTab[] = [
   { label: 'Forex', value: 'Forex' },
   { label: 'Crypto', value: 'Crypto', disabled: true }
 ]
-const accounts = [ 'E8 One', 'E8 Signature' ]
+const accounts = ['E8 One', 'E8 Signature']
 const activeMarket = ref('Futures')
 const activeAccount = ref('E8 One')
 

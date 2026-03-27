@@ -204,14 +204,14 @@ const quickLinks: QuickLink[] = [
   { label: 'Help center', href: 'https://help.e8markets.com/en', external: true },
   { label: 'E8X dashboard', href: 'https://e8x.e8markets.com/', external: true },
   { label: 'E8 Blog', href: 'https://blog.e8markets.com', external: true },
-  { label: 'Discounts', href: `${DOMAIN}/e8-markets-discount-code` },
+  { label: 'Discounts', href: `${DOMAIN}/e8-markets-discount-code` }
 ]
 
 const socials: Social[] = [
   { label: 'Discord', icon: '/images/icon-discord.svg', href: 'https://discord.com/invite/e8markets' },
   { label: 'Youtube', icon: '/images/icon-youtube.svg', href: 'https://www.youtube.com/channel/UCHGznmL3rdnsDKDgrRyK_VQ' },
   { label: 'X', icon: '/images/icon-x.svg', href: 'https://twitter.com/e8markets' },
-  { label: 'Instagram', icon: '/images/icon-instagram.svg', href: 'https://www.instagram.com/E8Marketscom' },
+  { label: 'Instagram', icon: '/images/icon-instagram.svg', href: 'https://www.instagram.com/E8Marketscom' }
 ]
 
 const otherLinks = ['Other links', 'Trial account', 'Discounts', 'Education']

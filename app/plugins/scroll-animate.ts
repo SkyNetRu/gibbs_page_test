@@ -22,6 +22,6 @@ export default defineNuxtPlugin((nuxtApp) => {
       )
 
       observer.observe(el)
-    },
+    }
   })
 })

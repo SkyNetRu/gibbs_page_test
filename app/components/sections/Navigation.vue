@@ -8,7 +8,7 @@
         class="lg:hidden"
         :ui="{
           content: 'bg-[#000504]/95 backdrop-blur-xl border border-white/10 rounded-xl mt-2 min-w-[180px]',
-          item: 'text-white/80 hover:text-white hover:bg-white/8 text-sm font-medium px-4 py-2.5 rounded-lg transition-colors',
+          item: 'text-white/80 hover:text-white hover:bg-white/8 text-sm font-medium px-4 py-2.5 rounded-lg transition-colors'
         }"
       >
         <UButton
@@ -54,7 +54,6 @@
           label="SIGN UP"
           href="#"
         />
-
       </div>
     </div>
   </nav>
@@ -67,6 +66,6 @@ const navLinks = ['Forex', 'Futures', 'Crypto', 'Traders payout', 'FAQ']
 
 const mobileMenuItems = navLinks.map(link => ({
   label: link,
-  href: '#',
+  href: '#'
 }))
 </script>

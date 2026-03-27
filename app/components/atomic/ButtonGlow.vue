@@ -118,7 +118,7 @@ const glows = computed(() => glowMap[props.variant])
 const glowColorMap = {
   orange: { outer: '#FF6900', mid: '#FEF9C2', inner: '#FFF7ED' },
   salmon: { outer: '#FF6900', mid: '#ffddc9', inner: '#FFF7ED' },
-  teal:   { outer: '#19f3cb', mid: '#d0faf5', inner: '#e0faf8' },
+  teal: { outer: '#19f3cb', mid: '#d0faf5', inner: '#e0faf8' }
 }
 const glowColors = computed(() => glowColorMap[props.variant])
 
@@ -286,7 +286,6 @@ function onMouseMove(e: MouseEvent) {
       padding-inline: 12px;
       height: var(--pill-height, 36px);
       transition: border-color 0.15s ease, box-shadow 0.15s ease;
-
 
       &:active {
         box-shadow:

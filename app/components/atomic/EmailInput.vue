@@ -40,7 +40,7 @@ function handleSubmit() {
   toast.add({
     title: 'Code sent!',
     description: `Discount code sent to ${email.value}`,
-    color: 'success',
+    color: 'success'
   })
   email.value = ''
 }
