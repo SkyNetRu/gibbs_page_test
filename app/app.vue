@@ -5,6 +5,8 @@
 </template>
 
 <script setup lang="ts">
+const { origin } = useRequestURL()
+
 useHead({
   meta: [
     { name: 'viewport', content: 'width=device-width, initial-scale=1, maximum-scale=1, user-scalable=no' },
@@ -117,14 +119,14 @@ useSeoMeta({
   ogType: 'website',
   ogTitle: 'E8 Markets: Best Prop Firm & Funded Accounts',
   ogDescription: 'E8 Markets – the best prop firm for traders. Pass our funded challenge, trade up to $1M in capital, enjoy 100% profit splits, zero hidden fees, fast payouts.',
-  ogUrl: 'https://e8markets.com/',
+  ogUrl: origin,
   ogSiteName: 'E8 Markets',
-  ogImage: 'https://e8markets.com/meta/og-image.jpg',
+  ogImage: `${origin}/meta/og-image.jpg`,
   ogImageWidth: 1562,
   ogImageHeight: 608,
   twitterCard: 'summary_large_image',
   twitterTitle: 'E8 Markets: Best Prop Firm & Funded Accounts',
   twitterDescription: 'E8 Markets – the best prop firm for traders. Pass our funded challenge, trade up to $1M in capital, enjoy 100% profit splits, zero hidden fees, fast payouts.',
-  twitterImage: 'https://e8markets.com/meta/og-image.jpg'
+  twitterImage: `${origin}/meta/og-image.jpg`
 })
 </script>
