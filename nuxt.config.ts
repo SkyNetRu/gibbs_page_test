@@ -13,7 +13,7 @@ export default defineNuxtConfig({
 
   runtimeConfig: {
     public: {
-      siteUrl: process.env.NUXT_PUBLIC_SITE_URL || 'https://gibbs-page-test.vercel.app'
+      siteUrl: import.meta.env.NUXT_PUBLIC_SITE_URL || 'https://gibbs-page-test.vercel.app'
     }
   },
 
