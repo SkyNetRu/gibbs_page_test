@@ -20,7 +20,14 @@
           Get in contact with us directly from this site with our live customer support or at our help center
         </p>
         <!-- Trustpilot -->
-        <div class="flex flex-col gap-4  mt-15">
+        <a
+          href="https://www.trustpilot.com/review/e8markets.com?utm_medium=trustbox&amp;utm_source=Mini"
+          target="_blank"
+          aria-describedby="screen-reader-only-rating screen-reader-only-instruction"
+          class="flex flex-col gap-4 mt-15 w-fit"
+          @mouseenter="isHovered = true"
+          @mouseleave="isHovered = false"
+        >
           <img
             src="/images/trustpilot-logo.svg"
             alt="Trustpilot"
@@ -34,7 +41,7 @@
               v-for="i in 5"
               :key="i"
               class="w-8 h-8 flex items-center justify-center"
-              :style="{ background: starBg(i) }"
+              :style="{ background: starBg(i, isHovered) }"
             >
               <img
                 src="/images/icon-star.svg"
@@ -49,7 +56,7 @@
           <p class="text-white/80 text-sm leading-5">
             Rated {{ rating }}/5.0
           </p>
-        </div>
+        </a>
       </div>
 
       <!-- Right: link columns -->
@@ -178,8 +185,10 @@ import InlineSvg from 'vue-inline-svg'
 import type { ILink, ISocial } from '~/types/links'
 
 const rating = 4.5
+const isHovered = ref(false)
 
-function starBg(i: number): string {
+function starBg(i: number, hovered = false): string {
+  if (hovered) return '#007a52'
   const full = Math.floor(rating)
   const fraction = rating % 1
   if (i <= full) return '#219653'
