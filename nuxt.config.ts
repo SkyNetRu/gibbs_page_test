@@ -1,11 +1,5 @@
 // https://nuxt.com/docs/api/configuration/nuxt-config
 export default defineNuxtConfig({
-  runtimeConfig: {
-    public: {
-      siteUrl: process.env.NUXT_PUBLIC_SITE_URL || 'https://gibbs-page-test.vercel.app'
-    }
-  },
-
   modules: [
     '@nuxt/eslint',
     '@nuxt/ui'
@@ -16,6 +10,12 @@ export default defineNuxtConfig({
   },
 
   css: ['~/assets/css/main.css'],
+
+  runtimeConfig: {
+    public: {
+      siteUrl: process.env.NUXT_PUBLIC_SITE_URL || 'https://gibbs-page-test.vercel.app'
+    }
+  },
 
   routeRules: {
     '/': { prerender: true }
