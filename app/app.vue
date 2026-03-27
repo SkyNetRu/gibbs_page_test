@@ -122,6 +122,7 @@ useSeoMeta({
   ogUrl: siteUrl,
   ogSiteName: 'E8 Markets',
   ogImage: `${siteUrl}/meta/og-image.jpg`,
+  ogImageType: 'image/jpeg',
   ogImageWidth: 1562,
   ogImageHeight: 608,
   twitterCard: 'summary_large_image',
