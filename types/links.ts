@@ -1,9 +1,9 @@
-interface Link {
+interface ILink {
   label: string
   href: string
   external?: boolean
 }
 
-interface Social extends Link{
+interface ISocial extends ILink {
   icon: string
 }
