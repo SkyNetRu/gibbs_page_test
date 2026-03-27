@@ -1,5 +1,6 @@
 @import "tailwindcss";
 @import "@nuxt/ui";
+@import "./scroll-animations.css";
 
 html, body {
   overflow-x: hidden;

@@ -1,8 +1,28 @@
 <template>
   <nav class="sticky top-0 z-50 backdrop-blur-[40px] bg-[#000504]/90 border-b border-white/16">
-    <div class="max-w-[1440px] mx-auto px-5 lg:px-20 py-5 flex items-center justify-between">
+    <div class="max-w-[1440px] mx-auto px-5 lg:px-20 gap-3 min-h-15 flex flex-wrap items-center lg:justify-between justify-start py-2 lg:py-0 lg:h-15">
+      <!-- Mobile menu -->
+      <UDropdownMenu
+        :items="mobileMenuItems"
+        :modal="false"
+        class="lg:hidden"
+        :ui="{
+          content: 'bg-[#000504]/95 backdrop-blur-xl border border-white/10 rounded-xl mt-2 min-w-[180px]',
+          item: 'text-white/80 hover:text-white hover:bg-white/8 text-sm font-medium px-4 py-2.5 rounded-lg transition-colors',
+        }"
+      >
+        <UButton
+          variant="ghost"
+          color="neutral"
+          :ui="{ base: 'p-2 text-white hover:bg-white/10 rounded-full transition-colors' }"
+        >
+          <UIcon name="i-lucide-menu" class="w-5 h-5" aria-hidden="true" />
+          <span class="sr-only">Open menu</span>
+        </UButton>
+      </UDropdownMenu>
+
       <!-- Logo -->
-      <div class="w-[250px]">
+      <div class="max-w-[250px]">
         <inline-svg
           src="/images/logo-e8markets.svg"
           width="131"
@@ -11,7 +31,8 @@
           aria-label="E8Markets"
         />
       </div>
-      <!-- Nav links -->
+
+      <!-- Desktop nav links -->
       <div class="hidden lg:flex items-center gap-1">
         <a
           v-for="link in navLinks"
@@ -22,8 +43,9 @@
           {{ link }}
         </a>
       </div>
-      <!-- Auth buttons -->
-      <div class="flex items-center gap-2.5">
+
+      <!-- Right side -->
+      <div class="flex items-center gap-2.5 ml-auto lg:ml-0">
         <AtomicButtonSecondary
           label="Log In"
           href="#"
@@ -32,6 +54,7 @@
           label="SIGN UP"
           href="#"
         />
+
       </div>
     </div>
   </nav>
@@ -41,4 +64,9 @@
 import InlineSvg from 'vue-inline-svg'
 
 const navLinks = ['Forex', 'Futures', 'Crypto', 'Traders payout', 'FAQ']
+
+const mobileMenuItems = navLinks.map(link => ({
+  label: link,
+  href: '#',
+}))
 </script>

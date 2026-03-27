@@ -6,6 +6,9 @@
         <img
           src="/images/simfi-bg-1.svg"
           alt=""
+          width="1440"
+          height="1224"
+          loading="lazy"
           class="w-full h-full"
         >
       </div>
@@ -16,6 +19,9 @@
         <img
           src="/images/simfi-bg-2.svg"
           alt=""
+          width="1440"
+          height="3368"
+          loading="lazy"
           class="w-full h-full"
         >
       </div>
@@ -24,34 +30,40 @@
     <!-- Content -->
     <div class="relative z-10 w-full px-4 max-w-[1440px] lg:px-[80px] py-[122px] flex flex-col justify-between min-h-screen mx-auto gap-[80px]">
       <!-- Phone plaque -->
-      <div class="absolute w-[779px] h-[717px] pointer-events-none hidden md:block right-[-60%] md:right-[-50%] xl:right-0 top-[-123px]">
+      <div class="simfi-phone absolute w-[779px] h-[717px] pointer-events-none hidden md:block xl:right-0 top-[-123px]">
         <img
           src="/images/simfi-payout-plaque.png"
-          alt=""
+          alt="SimFi payout dashboard"
+          width="779"
+          height="717"
+          loading="lazy"
           class="absolute inset-0 w-full h-full object-cover"
         >
       </div>
 
       <!-- Top: text block -->
-      <div class="flex flex-col gap-[32px] w-full md:max-w-[50%] lg:w-[600px]">
+      <div class="flex flex-col gap-8 w-full md:max-w-[50%] lg:w-[600px]">
         <h2
           class="font-schibsted text-[48px] font-normal text-[#441306] leading-[1.4] [font-feature-settings:'calt'_0,'liga'_0]"
         >
           The SimFi™ experience
         </h2>
-        <div class="flex flex-col gap-[12px]">
+        <div class="flex flex-col gap-3">
           <div
             v-for="item in simfiPoints"
             :key="item"
-            class="flex items-center gap-[12px]"
+            class="flex items-center gap-3"
           >
             <img
               src="/images/simfi-bullet.svg"
               alt=""
-              class="w-[14px] h-[14px] shrink-0"
+              width="14"
+              height="14"
+              loading="lazy"
+              class="w-3.5 h-3.5 shrink-0"
             >
             <p
-              class="font-schibsted text-[#441306] text-[16px] leading-[1.4] opacity-80 [font-feature-settings:'calt'_0,'liga'_0]"
+              class="font-schibsted text-[#441306] text-base leading-[1.4] opacity-80 [font-feature-settings:'calt'_0,'liga'_0]"
             >
               {{ item }}
             </p>
@@ -79,3 +91,17 @@ const simfiPoints = [
   'You trade. We measure. Performance unlocks opportunity.'
 ]
 </script>
+
+<style scoped>
+/* On xl+ right is controlled by Tailwind class xl:right-0 */
+/* On md..xl: smooth shift to the right as the screen shrinks */
+@media (min-width: 768px) and (max-width: 1279px) {
+  .simfi-phone {
+    /* At 1279px → ~0px (at the left edge of the xl zone)
+       At 768px  → shift further to the right
+       Formula: right = (100vw - 1279px) * 0.25 - 15%
+       The smaller the vw, the more negative the value = further to the right */
+    right: calc((100vw - 1279px) * 0.25 - 15%);
+  }
+}
+</style>

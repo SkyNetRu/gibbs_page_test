@@ -4,6 +4,9 @@
     <img
       src="/images/built-for-perfomance-bg.svg"
       alt=""
+      width="1440"
+      height="740"
+      loading="lazy"
       class="absolute inset-0 w-full h-full object-cover pointer-events-none"
     >
 
@@ -15,30 +18,36 @@
       <img
         src="/images/perf-tire.png"
         alt=""
+        width="1173"
+        height="1292"
+        loading="lazy"
         class="absolute w-[1173px] h-[1292px] top-[-66%] right-[80%] lg:right-[45%] md:right-[75%] object-cover rotate-[-6.73deg] aspect-[59/65]"
       >
     </div>
 
-    <div class="relative z-10 max-w-[1440px] mx-auto px-5 sm:px-20 min-h-[740px] flex items-center justify-end">
+    <div class="relative z-10 max-w-[1440px] mx-auto px-5 lg:px-20 min-h-[740px] flex items-center justify-end">
       <div class="w-[530px] flex flex-col gap-8">
         <h2 class="text-[48px] text-white leading-[1.2]">
           Built for long-term<br>
           trading performance
         </h2>
-        <div class="flex flex-col gap-3">
+        <div class="flex flex-col gap-8">
           <p class="text-white/80 text-base">
             We do not fast-track hype. We develop professionals.
           </p>
-          <div class="flex flex-col gap-3 mt-3">
+          <div class="flex flex-col gap-8 mt-3">
             <div
               v-for="feature in features"
               :key="feature"
-              class="flex items-center gap-3"
+              class="flex items-center gap-8"
             >
               <img
                 src="/images/icon-check-circle.svg"
                 alt="✓"
-                class="w-[18px] h-[18px] flex-shrink-0"
+                width="18"
+                height="18"
+                loading="lazy"
+                class="w-4.5 h-4.5 flex-shrink-0"
               >
               <p class="text-white/80 text-base">
                 {{ feature }}

@@ -1,12 +1,12 @@
 <template>
   <section class="bg-[#000504] py-20">
-    <div class=" mx-auto flex flex-col gap-8">
+    <div class=" mx-auto flex flex-col">
       <!-- Headline -->
       <div class="flex flex-col items-center gap-8">
         <h2 class="text-[48px] text-white text-center leading-[1.6]">
           Choose your E8 Challenge
         </h2>
-        <p class="text-white/80 text-base font-medium text-center">
+        <p class="text-white/80 text-base font-medium text-center ">
           Select your market and account. Your enrollment cost scales with the simulation size you select.
         </p>
         <!-- Market tabs -->
@@ -16,16 +16,16 @@
           variant="link"
           color="neutral"
           :ui="{
-            list: 'market-tabs-list p-0 gap-0 border-b border-white/16',
+            list: 'market-tabs-list p-0 gap-0 ',
             indicator: 'hidden',
-            trigger: 'market-tab px-[40px] py-[14px] text-[16px] font-bold capitalize text-white rounded-none data-[state=inactive]:text-white data-[state=inactive]:opacity-100 data-[state=active]:text-white',
+            trigger: 'market-tab px-10 py-3.5 text-base font-bold capitalize text-white rounded-none data-[state=inactive]:text-white data-[state=inactive]:opacity-100 data-[state=active]:text-white',
             content: 'hidden'
           }"
         />
       </div>
 
       <!-- Container -->
-      <div class="border-t border-white/16 px-5 sm:px-20 pt-12 flex flex-col gap-14">
+      <div class="border-t border-white/16 px-5 lg:px-20 pt-12 flex flex-col gap-13.5">
         <!-- Account type selector -->
         <div class="flex flex-col items-center gap-3">
           <p class="text-white/80 text-sm font-medium">
@@ -35,9 +35,9 @@
             <button
               v-for="account in accounts"
               :key="account"
-              class="px-10 py-3 text-base font-bold capitalize rounded-full transition-all"
+              class="px-10 py-3.5 text-base font-bold capitalize rounded-full border border-transparent transition-[background,box-shadow]"
               :class="activeAccount === account
-                ? 'bg-white/8 border border-white/16 shadow-[inset_0_-4px_24px_rgba(255,255,255,0.16)] text-white'
+                ? 'bg-white/8 border-white/16 shadow-[inset_0_-4px_24px_rgba(255,255,255,0.16)] text-white'
                 : 'text-white'"
               @click="activeAccount = account"
             >
@@ -46,30 +46,33 @@
           </div>
         </div>
 
-        <!-- Description -->
-        <p class="text-white/80 text-base text-center">
-          Our most popular account — designed for traders who want flexibility and high earnings.
-        </p>
+        <div class="flex flex-col gap-8">
+          <!-- Description -->
+          <p class="text-white/80 text-base text-center">
+            Our most popular account — designed for traders who want flexibility and high earnings.
+          </p>
 
-        <!-- Pricing cards -->
-        <div class="flex flex-wrap gap-3 justify-center">
-          <CardsPricingPlan
-            v-for="plan in plans"
-            :key="plan.capital"
-            v-bind="plan"
-          />
+          <!-- Pricing cards -->
+          <div class="flex flex-wrap gap-3 justify-center">
+            <CardsPricingPlan
+              v-for="plan in plans"
+              :key="plan.capital"
+              v-bind="plan"
+            />
+          </div>
         </div>
 
         <!-- Email promo -->
         <div class="flex flex-col items-center gap-6">
-          <div class="md:border md:border-white/10 rounded-[123px] p-[13px] flex flex-col items-center gap-4 md:flex-row md:gap-[24px]">
-            <p class="border border-white/10 rounded-[123px] p-[16px] md:border-0 md:p-0 text-white/60 text-base pl-3">
+          <div
+            class="md:border md:border-white/10 rounded-[123px] p-3 flex flex-col items-center gap-6 md:flex-row md:gap-6">
+            <p class="border border-white/10 rounded-[123px] p-4 md:border-0 md:p-0 text-white/60 text-base pl-3">
               Save up to 50% with our code
             </p>
-            <AtomicEmailInput />
+            <AtomicEmailInput/>
           </div>
           <div class="flex flex-col items-center gap-6">
-            <AtomicScrollIndicator />
+            <AtomicScrollIndicator/>
             <p class="text-white text-sm italic text-center">
               You're purchasing access to an educational simulation & assessment. Any payout is discretionary,<br>
               not guaranteed, and requires E8's acceptance & licensing of your performance data.
@@ -106,7 +109,7 @@ const marketTabs: MarketTab[] = [
   { label: 'Forex', value: 'Forex' },
   { label: 'Crypto', value: 'Crypto', disabled: true }
 ]
-const accounts = ['E8 One', 'E8 Signature']
+const accounts = [ 'E8 One', 'E8 Signature' ]
 const activeMarket = ref('Futures')
 const activeAccount = ref('E8 One')
 
@@ -155,10 +158,14 @@ const plans: PricingPlan[] = [
 </script>
 
 <style lang="scss" scoped>
+:deep(.market-tab) {
+  transition: background 0.2s, color 0.2s;
+  border-bottom: 1px solid transparent;
+}
+
 :deep(.market-tab[data-state=active]) {
-  background: linear-gradient(180deg, rgba(255,255,255,0) 0%, rgba(255,255,255,0.16) 100%);
-  border-bottom: 1px solid rgba(255,255,255,0.4);
-  margin-bottom: -1px;
+  background: linear-gradient(180deg, rgba(255, 255, 255, 0) 0%, rgba(255, 255, 255, 0.16) 100%);
+  border-bottom: 1px solid rgba(255, 255, 255, 0.4);
 }
 
 :deep(.market-tab[disabled]) {

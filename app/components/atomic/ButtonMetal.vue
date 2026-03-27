@@ -24,8 +24,41 @@ defineProps<{ label: string }>()
   display: inline-flex;
   cursor: pointer;
   transition: opacity 0.2s;
+  position: relative;
+  overflow: hidden;
+  border-radius: 835px;
 
   &:hover { opacity: 0.85; }
+
+  &:active {
+    .button-metal__inner_area {
+      box-shadow:
+        inset 3px 3px 8px rgba(0, 0, 0, 1),
+        inset -2px -2px 5px rgba(255, 255, 255, 0.15);
+    }
+  }
+
+  // Metallic glint — sweeps once, then pauses before repeating
+  &::after {
+    content: '';
+    position: absolute;
+    inset: 0;
+    background: linear-gradient(
+      108deg,
+      transparent 25%,
+      rgba(255, 255, 255, 0.55) 50%,
+      transparent 75%
+    );
+    transform: translateX(-150%);
+    pointer-events: none;
+    animation: metal-shine 3s ease-in-out infinite;
+  }
+
+  @keyframes metal-shine {
+    0%   { transform: translateX(-150%); }
+    90%  { transform: translateX(150%); }
+    100% { transform: translateX(150%); }
+  }
 
   &__outer_border {
     padding: 0.84px;

@@ -1,9 +1,12 @@
 <template>
-  <section class="relative overflow-hidden min-h-[800px] p-20 flex flex-col">
+  <section class="relative overflow-hidden min-h-[800px] px-5 pt-10 sm:p-20 flex flex-col">
     <!-- Background -->
     <img
       src="/images/ready-to-start-bg.svg"
       alt=""
+      width="1440"
+      height="800"
+      loading="lazy"
       class="absolute inset-0 w-full h-full object-cover pointer-events-none"
     >
 
@@ -14,7 +17,10 @@
     <div class="absolute top-[-5%] sm:top-[-15%] left-1/2 -translate-x-1/2 w-[829px] pointer-events-none">
       <img
         src="/images/ready-helmet.png"
-        alt=""
+        alt="Racing driver helmet"
+        width="829"
+        height="829"
+        loading="lazy"
         class="w-full object-cover"
       >
     </div>

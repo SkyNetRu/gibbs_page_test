@@ -24,6 +24,9 @@
           <img
             src="/images/trustpilot-logo.svg"
             alt="Trustpilot"
+            width="103"
+            height="20"
+            loading="lazy"
             class="h-5 w-[102.5px]"
           >
           <div class="flex items-center gap-[3.2px]">
@@ -36,6 +39,9 @@
               <img
                 src="/images/icon-star.svg"
                 alt="★"
+                width="22"
+                height="22"
+                loading="lazy"
                 class="w-[22px] h-[22px]"
               >
             </div>
@@ -57,7 +63,9 @@
             <a
               v-for="link in quickLinks"
               :key="link.label"
-              href="#"
+              :href="link.href"
+              :target="link.external ? '_blank' : undefined"
+              :rel="link.external ? 'noopener noreferrer' : undefined"
               class="hover:text-white transition-colors flex items-center gap-2"
             >
               {{ link.label }}
@@ -68,6 +76,9 @@
                 <img
                   src="/images/icon-external.svg"
                   alt=""
+                  width="40"
+                  height="40"
+                  loading="lazy"
                   class="absolute top-1/2 left-1/2 -translate-x-1/2 -translate-y-1/2 w-10 h-10"
                 >
               </span>
@@ -80,14 +91,10 @@
             Legal
           </p>
           <div class="flex flex-col gap-3 text-sm text-white/60">
-            <a
-              href="#"
-              class="hover:text-white transition-colors"
-            >Privacy policy</a>
-            <a
-              href="#"
-              class="hover:text-white transition-colors"
-            >Terms & conditions</a>
+            <a :href="`${DOMAIN}/e8-markets-privacy-policy`" class="hover:text-white transition-colors">Privacy policy</a>
+            <a :href="`${DOMAIN}/e8-markets-terms-and-conditions`" class="hover:text-white transition-colors">Terms & conditions</a>
+            <a :href="`${DOMAIN}/e8-markets-cookies-policy`" class="hover:text-white transition-colors">Cookies policy</a>
+            <a :href="`${DOMAIN}/legal/affiliate`" class="hover:text-white transition-colors">Affiliate terms</a>
           </div>
         </div>
         <!-- Socials -->
@@ -99,12 +106,17 @@
             <a
               v-for="social in socials"
               :key="social.label"
-              href="#"
+              :href="social.href"
+              target="_blank"
+              rel="noopener noreferrer"
               class="hover:text-white transition-colors flex items-center gap-2"
             >
               <img
                 :src="social.icon"
                 :alt="social.label"
+                width="40"
+                height="40"
+                loading="lazy"
                 class="w-10 h-10 flex-shrink-0"
               >
               <span class="w-px h-3 bg-white/30" />
@@ -129,6 +141,9 @@
           <img
             src="/images/icon-arrow-right.svg"
             alt=""
+            width="16"
+            height="16"
+            loading="lazy"
             class="w-4 h-4"
           >
         </a>
@@ -159,12 +174,14 @@ import InlineSvg from 'vue-inline-svg'
 
 interface QuickLink {
   label: string
+  href: string
   external?: boolean
 }
 
 interface Social {
   label: string
   icon: string
+  href: string
 }
 
 const rating = 4.5
@@ -178,22 +195,23 @@ function starBg(i: number): string {
   return '#d9d9d9'
 }
 
+const DOMAIN = 'https://e8markets.com'
+
 const quickLinks: QuickLink[] = [
-  { label: 'Meet E8' },
-  { label: 'Trading symbols' },
-  { label: 'Affiliate program' },
-  { label: 'Contact' },
-  { label: 'About us' },
-  { label: 'Help center', external: true },
-  { label: 'E8X dashboard', external: true },
-  { label: 'Careers' }
+  { label: 'Qualification', href: `${DOMAIN}/e8-markets-evaluation` },
+  { label: 'Affiliate program', href: `${DOMAIN}/affiliate` },
+  { label: 'Trading symbols', href: 'https://e8x.e8markets.com/trading-symbols', external: true },
+  { label: 'Help center', href: 'https://help.e8markets.com/en', external: true },
+  { label: 'E8X dashboard', href: 'https://e8x.e8markets.com/', external: true },
+  { label: 'E8 Blog', href: 'https://blog.e8markets.com', external: true },
+  { label: 'Discounts', href: `${DOMAIN}/e8-markets-discount-code` },
 ]
 
 const socials: Social[] = [
-  { label: 'Discord', icon: '/images/icon-discord.svg' },
-  { label: 'Youtube', icon: '/images/icon-youtube.svg' },
-  { label: 'X', icon: '/images/icon-x.svg' },
-  { label: 'Instagram', icon: '/images/icon-instagram.svg' }
+  { label: 'Discord', icon: '/images/icon-discord.svg', href: 'https://discord.com/invite/e8markets' },
+  { label: 'Youtube', icon: '/images/icon-youtube.svg', href: 'https://www.youtube.com/channel/UCHGznmL3rdnsDKDgrRyK_VQ' },
+  { label: 'X', icon: '/images/icon-x.svg', href: 'https://twitter.com/e8markets' },
+  { label: 'Instagram', icon: '/images/icon-instagram.svg', href: 'https://www.instagram.com/E8Marketscom' },
 ]
 
 const otherLinks = ['Other links', 'Trial account', 'Discounts', 'Education']
