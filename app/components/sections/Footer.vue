@@ -188,12 +188,12 @@ const rating = 4.5
 const isHovered = ref(false)
 
 function starBg(i: number, hovered = false): string {
-  if (hovered) return '#007a52'
+  const filled = hovered ? '#007a52' : '#219653'
   const full = Math.floor(rating)
   const fraction = rating % 1
-  if (i <= full) return '#219653'
+  if (i <= full) return filled
   if (i === full + 1 && fraction > 0)
-    return `linear-gradient(90deg, #219653 ${fraction * 100}%, #d9d9d9 ${fraction * 100}%)`
+    return `linear-gradient(90deg, ${filled} ${fraction * 100}%, #d9d9d9 ${fraction * 100}%)`
   return '#d9d9d9'
 }
 
