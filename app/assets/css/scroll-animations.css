@@ -1,0 +1,36 @@
+/* ─── Scroll animations ─── */
+[data-aos] {
+  transition-property: opacity, transform;
+  transition-duration: 0.7s;
+  transition-timing-function: cubic-bezier(0.25, 0.46, 0.45, 0.94);
+}
+
+[data-aos=fade-up] {
+  opacity: 0;
+  transform: translateY(60px);
+}
+
+[data-aos=fade-down] {
+  opacity: 0;
+  transform: translateY(-60px);
+}
+
+[data-aos=fade-in] {
+  opacity: 0;
+  transform: none;
+}
+
+[data-aos=zoom-up] {
+  opacity: 0;
+  transform: translateY(60px) scale(0.8);
+}
+
+[data-aos=zoom-down] {
+  opacity: 0;
+  transform: translate3d(0, 100px, 0) scale(1.2);
+}
+
+[data-aos].aos-animate {
+  opacity: 1;
+  transform: translateZ(0) scale(1);
+}

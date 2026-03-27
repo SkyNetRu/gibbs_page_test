@@ -14,6 +14,9 @@
             <img
               :src="badge.img"
               :alt="badge.caption"
+              width="160"
+              height="80"
+              loading="lazy"
               class="max-h-full max-w-full object-contain"
             >
           </div>

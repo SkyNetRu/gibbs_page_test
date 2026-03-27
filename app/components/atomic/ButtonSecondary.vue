@@ -31,6 +31,12 @@ withDefaults(defineProps<{
       background: radial-gradient(ellipse at center, rgba(255,255,255,0.18) 0%, rgba(0,0,0,0.5) 75%);
     }
 
+    &:active {
+      box-shadow:
+        inset 3px 3px 8px rgba(0, 0, 0, 0.4),
+        inset -2px -2px 5px rgba(255, 255, 255, 0.15);
+    }
+
     :deep(.button-secondary__text) {
       color: #ffffff;
       text-shadow: 0 0 56px #000;
@@ -40,8 +46,15 @@ withDefaults(defineProps<{
   // ─── Filled variant (white) ───
   &--filled {
     background: #ffffff;
+    transition: box-shadow 0.15s ease;
 
     &:hover { background: rgba(255, 255, 255, 0.9); }
+
+    &:active {
+      box-shadow:
+        inset 3px 3px 8px rgba(0, 0, 0, 0.5),
+        inset -2px -2px 5px rgba(255, 255, 255, 0.75);
+    }
 
     :deep(.button-secondary__text) {
       color: #000000;
