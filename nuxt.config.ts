@@ -11,6 +11,12 @@ export default defineNuxtConfig({
 
   css: ['~/assets/css/main.css'],
 
+  runtimeConfig: {
+    public: {
+      siteUrl: import.meta.env.NUXT_PUBLIC_SITE_URL || 'https://gibbs-page-test.vercel.app'
+    }
+  },
+
   routeRules: {
     '/': { prerender: true }
   },
